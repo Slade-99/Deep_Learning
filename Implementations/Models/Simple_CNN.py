@@ -1,17 +1,3 @@
-"""
-A simple walkthrough of how to code a convolutional neural network (CNN)
-using the PyTorch library. For demonstration we train it on the very
-common MNIST dataset of handwritten digits. In this code we go through
-how to create the network as well as initialize a loss function, optimizer,
-check accuracy and more.
-
-Programmed by Aladdin Persson
-* 2020-04-08: Initial coding
-* 2021-03-24: More detailed comments and small revision of the code
-* 2022-12-19: Small revision of code, checked that it works with latest PyTorch version
-
-"""
-
 # Imports
 import torch
 import torch.nn.functional as F  # Parameterless functions, like (some) activation functions
@@ -19,6 +5,7 @@ import torchvision.datasets as datasets  # Standard datasets
 import torchvision.transforms as transforms  # Transformations we can perform on our dataset for augmentation
 from torch import optim  # For optimizers like SGD, Adam, etc.
 from torch import nn  # All neural network modules
+from Custom_Dataset import Custom
 from torch.utils.data import (
     DataLoader,
 )  # Gives easier dataset managment by creating mini batches etc.
@@ -43,7 +30,7 @@ class CNN(nn.Module):
             stride=1,
             padding=1,
         )
-        self.fc1 = nn.Linear(16 * 7 * 7, num_classes)
+        self.fc1 = nn.Linear(16 * 64 * 64, num_classes)
 
     def forward(self, x):
         x = F.relu(self.conv1(x))
@@ -60,20 +47,22 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Hyperparameters
 in_channels = 1
-num_classes = 10
+num_classes = 3
 learning_rate = 3e-4 # karpathy's constant
 batch_size = 64
-num_epochs = 3
-
+num_epochs = 5
 # Load Data
-train_dataset = datasets.MNIST(
-    root="dataset/", train=True, transform=transforms.ToTensor(), download=True
+dataset = Custom(
+    csv_file="/home/azwad/Datasets/Benchmark_Dataset/output_labels (Copy).csv",
+    root_dir="/home/azwad/Datasets/Benchmark_Dataset/Filtered",
+    transform=transforms.ToTensor(),
 )
-test_dataset = datasets.MNIST(
-    root="dataset/", train=False, transform=transforms.ToTensor(), download=True
-)
-train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
-test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=True)
+
+train_set, test_set = torch.utils.data.random_split(dataset, [400, 100])
+train_loader = DataLoader(dataset=train_set, batch_size=batch_size, shuffle=True)
+test_loader = DataLoader(dataset=test_set, batch_size=batch_size, shuffle=True)
+
+
 
 # Initialize network
 model = CNN(in_channels=in_channels, num_classes=num_classes).to(device)
