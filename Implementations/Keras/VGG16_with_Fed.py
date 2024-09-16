@@ -157,7 +157,7 @@ NUM_CLIENTS = 10
 NUM_ROUNDS = 3
            
 
-batch_size = 20
+batch_size = 32
 steps = int(len(train_paths)/batch_size)
 epochs = 5
            

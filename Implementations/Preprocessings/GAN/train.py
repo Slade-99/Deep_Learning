@@ -1,5 +1,3 @@
-
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -12,6 +10,8 @@ from tqdm import tqdm
 from utils import gradient_penalty, save_checkpoint, load_checkpoint
 from model import Discriminator, Generator, initialize_weights
 from Custom_Dataset import Custom
+
+
 
 
 # Hyperparameters etc.
