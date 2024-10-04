@@ -144,6 +144,8 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,), (0.5,))
 ])
 
+
+
 dataset = CustomDataset(img_paths=['path_to_image1', 'path_to_image2'], transform=transform)
 dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
