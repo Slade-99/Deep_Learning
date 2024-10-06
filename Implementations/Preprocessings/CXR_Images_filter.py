@@ -2,10 +2,10 @@ import os
 from PIL import Image
 
 # Define the source folder containing the original images
-source_folder = '/home/azwad/Datasets/Thesis DataSet-20240825T121325Z-001/Cropped'
+source_folder = '/home/azwad/Datasets/Benchmark_Dataset/Unified'
 
 # Define the destination folder for transformed images
-destination_folder = '/home/azwad/Datasets/Thesis DataSet-20240825T121325Z-001/Filtered'
+destination_folder = '/home/azwad/Datasets/Benchmark_Dataset/Filtered/Images'
 
 # Ensure the destination folder exists
 os.makedirs(destination_folder, exist_ok=True)

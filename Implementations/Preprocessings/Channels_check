@@ -1,0 +1,14 @@
+import torch
+from torchvision import transforms
+from PIL import Image
+
+
+image_path = '/home/azwad/Datasets/Benchmark_Dataset/Filtered/Images/COVID19(0).jpg'  
+image = Image.open(image_path)
+
+
+transform = transforms.ToTensor()
+
+image_tensor = transform(image)
+
+print(image_tensor.shape)
