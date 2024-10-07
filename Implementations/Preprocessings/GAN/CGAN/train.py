@@ -102,16 +102,37 @@ for epoch in range(NUM_EPOCHS):
 
 
         # Save images every 20 batches
-        if batch_idx % 20 == 0:
+        if batch_idx % 2 == 0:
             with torch.no_grad():
-                fake = gen(fixed_noise , labels )
-                
-                # Save real images
-                save_image(real[:32], os.path.join(SAVE_DIR, f"real_epoch{epoch}_batch{batch_idx}.png"), normalize=True)
-                # Save fake images
-                save_image(fake[:32], os.path.join(SAVE_DIR, f"fake_epoch{epoch}_batch{batch_idx}.png"), normalize=True)
+                fake = gen(fixed_noise, labels)
 
-        print(
-            f"Epoch [{epoch}/{NUM_EPOCHS}] Batch {batch_idx}/{len(dataloader)} \
-            Loss D: {loss_critic:.4f}, loss G: {loss_gen:.4f}"
-        )
+                # Save 4 real images with labels
+                for i in range(4):
+                    save_image(real[i], os.path.join(SAVE_DIR, f"real_epoch{epoch}_batch{batch_idx}_label{labels[i].item()}_{i}.png"), normalize=True)
+                
+                # Save 4 fake images with labels
+                for i in range(4):
+                    save_image(fake[i], os.path.join(SAVE_DIR, f"fake_epoch{epoch}_batch{batch_idx}_label{labels[i].item()}_{i}.png"), normalize=True)
+
+            
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': gen.state_dict(),
+                'optimizer_state_dict': opt_gen.state_dict(),
+            }, os.path.join(SAVE_DIR, f'generator_epoch_{epoch}_{batch_idx}.pth'))
+
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': critic.state_dict(),
+                'optimizer_state_dict': opt_critic.state_dict(),
+            }, os.path.join(SAVE_DIR, f'discriminator_epoch_{epoch}_{batch_idx}.pth'))
+                
+        
+        
+        
+        
+        # Log loss information to a text file
+        log_message = f"Epoch [{epoch}/{NUM_EPOCHS}] Batch {batch_idx}/{len(dataloader)} Loss D: {loss_critic:.4f}, Loss G: {loss_gen:.4f}\n"
+            
+        with open('training_log.txt', 'a') as f:
+            f.write(log_message)
