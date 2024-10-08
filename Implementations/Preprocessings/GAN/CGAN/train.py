@@ -69,7 +69,24 @@ step = 0
 gen.train()
 critic.train()
 
-for epoch in range(NUM_EPOCHS):
+
+START_EPOCH = 0
+RESUME_TRAINING = False
+EPOCH_TO_LOAD = 0
+
+if RESUME_TRAINING:
+    gen_checkpoint = torch.load(os.path.join(SAVE_DIR,f'generator_epoch_{EPOCH_TO_LOAD}.pth'))
+    gen.load_state_dict(gen_checkpoint['model_state_dict'])
+    opt_gen.load_state_dict(gen_checkpoint['optimizer_state_dict'])
+    
+    critic_checkpoint = torch.load(os.path.join(SAVE_DIR,f'discriminator_epoch_{EPOCH_TO_LOAD}.pth'))
+    critic.load_state_dict(critic_checkpoint['model_state_dict'])
+    opt_critic.load_state_dict(critic_checkpoint['optimizer_state_dict'])
+
+
+
+
+for epoch in range(START_EPOCH , NUM_EPOCHS):
     for batch_idx, (real, labels) in enumerate(dataloader):
         real = real.to(device)
         cur_batch_size = real.shape[0]
@@ -115,17 +132,7 @@ for epoch in range(NUM_EPOCHS):
                     save_image(fake[i], os.path.join(SAVE_DIR, f"fake_epoch{epoch}_batch{batch_idx}_label{labels[i].item()}_{i}.png"), normalize=True)
 
             
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': gen.state_dict(),
-                'optimizer_state_dict': opt_gen.state_dict(),
-            }, os.path.join(SAVE_DIR, f'generator_epoch_{epoch}_{batch_idx}.pth'))
 
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': critic.state_dict(),
-                'optimizer_state_dict': opt_critic.state_dict(),
-            }, os.path.join(SAVE_DIR, f'discriminator_epoch_{epoch}_{batch_idx}.pth'))
                 
         
         
@@ -136,3 +143,16 @@ for epoch in range(NUM_EPOCHS):
             
         with open('training_log.txt', 'a') as f:
             f.write(log_message)
+            
+    
+    torch.save({
+        'epoch': epoch,
+        'model_state_dict': gen.state_dict(),
+        'optimizer_state_dict': opt_gen.state_dict(),
+    }, os.path.join(SAVE_DIR, f'generator_epoch_{epoch}.pth'))
+
+    torch.save({
+        'epoch': epoch,
+        'model_state_dict': critic.state_dict(),
+        'optimizer_state_dict': opt_critic.state_dict(),
+    }, os.path.join(SAVE_DIR, f'discriminator_epoch_{epoch}.pth'))
