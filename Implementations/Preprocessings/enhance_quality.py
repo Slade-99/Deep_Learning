@@ -32,8 +32,8 @@ def enhance_image(image_path, output_path):
     final_img.save(output_path)
 
 # Folder paths
-input_folder = "/path/to/your/40_images"
-output_folder = "/path/to/save/enhanced_images"
+input_folder = "/home/azwad/Datasets/Thesis DataSet/To be edited"
+output_folder = "/home/azwad/Datasets/Thesis DataSet/Reformed"
 
 # Ensure output folder exists
 os.makedirs(output_folder, exist_ok=True)

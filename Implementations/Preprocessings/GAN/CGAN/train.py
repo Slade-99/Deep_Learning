@@ -70,9 +70,9 @@ gen.train()
 critic.train()
 
 
-START_EPOCH = 0
-RESUME_TRAINING = False
-EPOCH_TO_LOAD = 0
+START_EPOCH = 2
+RESUME_TRAINING = True
+EPOCH_TO_LOAD = 1
 
 if RESUME_TRAINING:
     gen_checkpoint = torch.load(os.path.join(SAVE_DIR,f'generator_epoch_{EPOCH_TO_LOAD}.pth'))
