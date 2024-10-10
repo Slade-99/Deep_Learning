@@ -1,0 +1,60 @@
+For Adaptive Fed , we have selected clients based on previous performances and for global aggregation we applied FedAdaGrad.
+
+
+
+for round_num in range(NUM_ROUNDS):
+
+    # Select clients
+    selected_client_indices = np.random.choice(len(clients), size=int(NUM_CLIENTS * 0.5), replace=False)
+    selected_clients = [clients[i] for i in selected_client_indices]
+
+    # Initialize G_i for Adagrad at the server (if not already initialized)
+    if 'G' not in locals():
+        G = [np.zeros_like(weight) for weight in model.get_weights()]
+
+    # Transmit the global model to the selected clients
+    client_gradients = []
+    
+    for client in selected_clients:
+        client_model = tf.keras.models.clone_model(model)
+        client_model.set_weights(model.get_weights())
+  
+        # Compile the client model
+        client_model.compile(optimizer=Adam(learning_rate=0.0001),
+                             loss='sparse_categorical_crossentropy',
+                             metrics=['sparse_categorical_accuracy'])
+
+        steps_per_epoch = int(len(client[0]) / 20)
+        
+        # Train locally
+        client_model.fit(datagen(client[0], client[1], batch_size=batch_size, epochs=epochs),
+                         epochs=5, steps_per_epoch=steps_per_epoch)
+
+        # Compute gradients
+        gradients = []
+        for layer_index in range(len(client_model.get_weights())):
+            grad = client_model.get_weights()[layer_index] - model.get_weights()[layer_index]
+            gradients.append(grad)
+        
+        client_gradients.append(gradients)
+
+    # Update G_i for Adagrad and aggregate gradients
+    for layer_index in range(len(G)):
+        for grad in client_gradients:
+            G[layer_index] += grad[layer_index] ** 2
+        
+    # Update global model weights using aggregated gradients
+    new_weights = []
+    for layer_index in range(len(model.get_weights())):
+        # Calculate the adaptive learning rate
+        eta_i = 0.0001 / (np.sqrt(G[layer_index]) + 1e-8)  # Use small epsilon to avoid division by zero
+        
+        # Compute the average gradient for this layer
+        avg_gradient = np.mean([grad[layer_index] for grad in client_gradients], axis=0)
+
+        # Update weights
+        new_weight = model.get_weights()[layer_index] - eta_i * avg_gradient
+        new_weights.append(new_weight)
+    
+    # Set the new weights to the global model
+    model.set_weights(new_weights)
