@@ -22,8 +22,8 @@ NUM_CLASSES = 3
 GEN_EMBEDDING = 100
 NOISE_DIM = 100
 NUM_EPOCHS = 50
-FEATURES_DISC = 64
-FEATURES_GEN = 64
+FEATURES_DISC = 256
+FEATURES_GEN = 256
 CRITIC_ITERATIONS = 5
 LAMBDA_GP = 10
 
@@ -36,7 +36,7 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 transforms = transforms.Compose(
     [
-        transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
+        transforms.Grayscale(num_output_channels=1),
         transforms.Resize(IMAGE_SIZE),
         transforms.ToTensor(),
         transforms.Normalize(
@@ -71,7 +71,7 @@ critic.train()
 
 
 START_EPOCH = 2
-RESUME_TRAINING = True
+RESUME_TRAINING = False
 EPOCH_TO_LOAD = 1
 
 if RESUME_TRAINING:
