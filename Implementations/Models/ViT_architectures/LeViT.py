@@ -47,7 +47,7 @@ class CustomLeViT(nn.Module):
 class_names = ['normal', 'covid', 'pneumonia']
 # Initialize the CvT model
 pretrained_levit = CustomLeViT(3).to(device)
-summary(pretrained_levit, input_size=(1, 1,224, 224)) 
+#summary(pretrained_levit, input_size=(1, 1,224, 224)) 
 # Print a summary using torchinfo
 
 """"
@@ -57,10 +57,10 @@ summary(model=pretrained_levit,
         col_width=20,
         row_settings=["var_names"]
 )
+"""
 
 
-
-pretrained_cvt_transforms = transforms.Compose([
+pretrained_levit_transforms = transforms.Compose([
     transforms.Grayscale(num_output_channels=1),
     transforms.Resize((224, 224)),
     transforms.ToTensor(),  # Converts to tensor and scales to [0, 1]
@@ -101,7 +101,7 @@ def create_dataloaders(train_dir: str, test_dir: str, transform: transforms.Comp
 train_dataloader_pretrained, test_dataloader_pretrained, class_names = create_dataloaders(
     train_dir=train_dir,
     test_dir=test_dir,
-    transform=pretrained_cvt_transforms,
+    transform=pretrained_levit_transforms,
     batch_size=16
 )
 
@@ -174,4 +174,3 @@ plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.title('Confusion Matrix')
 plt.show()
-"""

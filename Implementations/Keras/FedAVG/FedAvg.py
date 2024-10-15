@@ -169,7 +169,7 @@ for i in range(NUM_CLIENTS):
     clients.append((client_data, client_labels))
 
 
-base_model = VGG16(input_shape=(IMAGE_SIZE,IMAGE_SIZE,3), include_top=False, weights='imagenet')
+base_model = VGG16(input_shape=(IMAGE_SIZE,IMAGE_SIZE,1), include_top=False, weights='imagenet')
 
 # Set all layers to non-trainable
 for layer in base_model.layers:
