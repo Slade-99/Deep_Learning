@@ -4,7 +4,7 @@ from math import log2
 
 START_TRAIN_AT_IMG_SIZE = 32
 DATASET = 'Covid_Penumonia'
-CHECKPOINT_GEN = "generator.pth"
+CHECKPOINT_GEN = "generator_normal.pth"
 CHECKPOINT_CRITIC = "critic.pth"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 SAVE_MODEL = True

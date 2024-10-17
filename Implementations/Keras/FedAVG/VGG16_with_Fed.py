@@ -33,8 +33,8 @@ import random
 
 
 
-train_dir = '/home/azwad/Datasets/Benchmark_Dataset/Data/train/'
-test_dir = '/home/azwad/Datasets/Benchmark_Dataset/Data/test/'
+train_dir = '/home/azwad/Downloads/Dataset_Finalized/'
+#test_dir = '/home/azwad/Datasets/Benchmark_Dataset/Data/test/'
 
 train_paths = []
 train_labels = []
@@ -49,14 +49,15 @@ train_paths, train_labels = shuffle(train_paths, train_labels)
 
 
 plt.figure(figsize=(14,6))
-colors = ['#F6F7C1', '#BEF0CB', '#D1FFF3']
+colors = ['#F6F7C1', '#BEF0CB','#9B59B6', '#D1FFF3']
 plt.rcParams.update({'font.size': 20})
-plt.pie([len([x for x in train_labels if x=='COVID19']),
-         len([x for x in train_labels if x=='NORMAL']),
-         len([x for x in train_labels if x=='PNEUMONIA'])
+plt.pie([len([x for x in train_labels if x=='normal']),
+         len([x for x in train_labels if x=='pneumonia']),
+         len([x for x in train_labels if x=='abnormal']),
+         len([x for x in train_labels if x=='effusion'])
          ],
-        labels=['COVID19','NORMAL', 'PNEUMONIA'],
-        colors=colors, autopct='%.1f%%', explode=(0.015,0.015,0.015),
+        labels=['normal','pneumonia', 'abnormal','effusion'],
+        colors=colors, autopct='%.1f%%', explode=(0.015,0.015,0.015,0.015),
         startangle=30)
 
 
@@ -65,23 +66,10 @@ plt.pie([len([x for x in train_labels if x=='COVID19']),
 test_paths = []
 test_labels = []
 
-for label in os.listdir(test_dir):
-    for image in os.listdir(test_dir+label):
-        test_paths.append(test_dir+label+'/'+image)
-        test_labels.append(label)
-
-test_paths, test_labels = shuffle(test_paths, test_labels)
 
 
 
 
-plt.figure(figsize=(14,6))
-colors = ['#BEF0CB', '#C1AEFC']
-plt.rcParams.update({'font.size': 20})
-plt.pie([len(train_labels), len(test_labels)],
-        labels=['Train','Test'],
-        colors=colors, autopct='%.1f%%', explode=(0.05,0),
-        startangle=30)
 
 
 

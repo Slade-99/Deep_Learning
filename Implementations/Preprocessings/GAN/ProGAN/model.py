@@ -1,7 +1,16 @@
 import torch
 import torch.nn as nn
+import torch.optim as optim
 import torch.nn.functional as F
 from math import log2
+import config
+from utils import (
+    gradient_penalty,
+    plot_to_tensorboard,
+    save_checkpoint,
+    load_checkpoint,
+    generate_examples,
+)
 
 factors = [1, 1, 1, 1, 1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32]
 
@@ -153,3 +162,12 @@ if __name__ == "__main__":
         out = critic(z, alpha=0.5, steps=num_steps)
         assert out.shape == (1, 1)
         print(f"Success! At img size: {img_size}")
+    
+    gen = Generator(
+        config.Z_DIM, config.IN_CHANNELS, img_channels=config.CHANNELS_IMG
+    ).to(config.DEVICE)
+    opt_gen = optim.Adam(gen.parameters(), lr=config.LEARNING_RATE, betas=(0.0, 0.99))
+    load_checkpoint(
+            config.CHECKPOINT_GEN, gen, opt_gen, config.LEARNING_RATE,
+        )
+    generate_examples(gen, 5, truncation=0.7, n=1000)

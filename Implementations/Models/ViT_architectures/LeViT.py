@@ -30,7 +30,7 @@ class CustomLeViT(nn.Module):
 
         # Load the CvT model configuration
         config = LevitConfig(num_channels=1 , num_labels = 3)
-        self.levit = LevitModel(config  )
+        self.levit = LevitModel(config)
         self.classifier = nn.Linear(384, num_labels)
 
 
@@ -44,9 +44,14 @@ class CustomLeViT(nn.Module):
         
     
 
-class_names = ['normal', 'covid', 'pneumonia']
+class_names = ['normal', 'abnormal', 'pneumonia']
 # Initialize the CvT model
 pretrained_levit = CustomLeViT(3).to(device)
+
+model_path = os.path.join("saved_models", "levit.pth")  
+pretrained_levit.load_state_dict(torch.load(model_path))
+
+
 #summary(pretrained_levit, input_size=(1, 1,224, 224)) 
 # Print a summary using torchinfo
 
@@ -68,8 +73,8 @@ pretrained_levit_transforms = transforms.Compose([
 
 
 
-train_dir = '/home/azwad/Datasets/Benchmark_Dataset/Data/train'
-test_dir = '/home/azwad/Datasets/Benchmark_Dataset/Data/test'
+train_dir = '/home/azwad/Downloads/Dataset_Finalized (GAN Included)/train'
+test_dir = '/home/azwad/Downloads/Dataset_Finalized/test'
 NUM_WORKERS = os.cpu_count()
 def create_dataloaders(train_dir: str, test_dir: str, transform: transforms.Compose, batch_size: int, num_workers: int=NUM_WORKERS):
     # Use ImageFolder to create dataset(s)
@@ -109,9 +114,10 @@ train_dataloader_pretrained, test_dataloader_pretrained, class_names = create_da
 optimizer = torch.optim.Adam(params=pretrained_levit.parameters(), lr=1e-3)
 loss_fn = torch.nn.CrossEntropyLoss()
 
+#model_path = os.path.join("saved_models", "levit.pth")  
+#pretrained_levit.load_state_dict(torch.load(model_path))
 
-
-num_epochs = 2
+num_epochs = 15
 for epoch in range(num_epochs):
     pretrained_levit.train()  # Set the model to training mode
     running_loss = 0.0

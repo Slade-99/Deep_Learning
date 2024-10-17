@@ -1,3 +1,11 @@
+"""
+Image_Size -> 224
+Params_Count -> 8,443,267
+
+
+"""
+
+
 import matplotlib.pyplot as plt
 import torch
 from torchinfo import summary
@@ -19,7 +27,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 from tqdm import tqdm
-
+from fvcore.nn import FlopCountAnalysis
 
 
 model_dir = "saved_models"
@@ -149,7 +157,7 @@ for round_idx in range(num_rounds):
 
         local_model = pretrained_levit  # Copy the global model
         local_model.train()  # Set model to training mode
-        optimizer = torch.optim.Adam(local_model.parameters())  # Define optimizer for the client
+        optimizer = torch.optim.Adam(local_model.parameters(), lr=1e-3)  # Define optimizer for the client
         running_loss = 0.0
         all_preds = []
         all_labels = []
@@ -223,7 +231,8 @@ with torch.no_grad():  # No need to compute gradients during evaluation
 
 # Classification Report
 print(classification_report(all_labels, all_preds, target_names=class_names))
-
+flops = FlopCountAnalysis(pretrained_levit, torch.randn(1, 1, 224, 224).to(device))
+print(f"FLOPs: {flops.total()}")
 # Confusion Matrix
 cm = confusion_matrix(all_labels, all_preds)
 

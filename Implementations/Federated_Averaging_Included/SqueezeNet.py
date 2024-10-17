@@ -8,6 +8,8 @@ from tensorflow.keras import Model
 from tensorflow.keras.layers import Input, Conv2D, GlobalAveragePooling2D, Dense, Concatenate
 from tensorflow.keras.optimizers import Adam
 
+
+
 # Set paths
 train_dir = 'C:/Users/LENOVO/Downloads/Data/train'
 valid_dir = 'C:/Users/LENOVO/Downloads/Data/test'
