@@ -29,6 +29,9 @@ from fvcore.nn import FlopCountAnalysis
 import cv2
 
 
+
+
+
 #### Necessary Variables ####
 model_dir = "saved_models"
 log_file_path = "training_logs.txt"
@@ -61,7 +64,7 @@ with open(log_file_path, 'w') as f:
 
 
 
-
+#########    Architecture  ########
 class MobileViT(nn.Module):
     def __init__(self , num_labels):
         super(MobileViT, self).__init__()
@@ -82,6 +85,12 @@ class MobileViT(nn.Module):
 
 pretrained_mobileViT = MobileViT(3).to(device)
     
+
+
+
+
+
+
 
 
 ####### Dataset Preparation ########
@@ -132,6 +141,11 @@ train_dataloader_pretrained, test_dataloader_pretrained, class_names = create_da
     transform=pretrained_mobileViT_transforms,
     batch_size=16
 )
+
+
+
+
+
 
 
 

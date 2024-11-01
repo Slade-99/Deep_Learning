@@ -1,0 +1,9 @@
+Federated Learning Training Log for EfficientNetB0
+=================================
+Round 1, Client Loss: 0.5850, Client Accuracy: 0.7556
+Round 2, Client Loss: 0.2835, Client Accuracy: 0.8996
+Round 3, Client Loss: 0.3026, Client Accuracy: 0.8872
+Round 4, Client Loss: 0.2052, Client Accuracy: 0.9206
+Round 5, Client Loss: 0.1709, Client Accuracy: 0.9401
+
+

@@ -1,0 +1,25 @@
+Federated Learning Training Log for MobileViT
+=================================
+Round 1:
+  - Loss: 1.3325
+  - Accuracy: 0.9090
+Round 2:
+  - Loss: 0.8344
+  - Accuracy: 0.9410
+Round 3:
+  - Loss: 0.6578
+  - Accuracy: 0.9569
+Round 4:
+  - Loss: 0.6719
+  - Accuracy: 0.9563
+Round 5:
+  - Loss: 0.4931
+  - Accuracy: 0.9670
+
+Final Evaluation:
+  - Accuracy: 0.9008
+  - F1 Score: 0.8969
+  - Precision: 0.9163
+  - Recall: 0.9008
+  - FLOPs: 1.39 GFLOPs
+  - Latency: 0.1046 s

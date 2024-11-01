@@ -1,0 +1,10 @@
+Federated Learning Training Log for MobileNetV2
+=================================
+Round 1, Client Loss: 0.0100, Client Accuracy: 1.0000
+Round 2, Client Loss: 0.0072, Client Accuracy: 1.0000
+Round 3, Client Loss: 0.0105, Client Accuracy: 1.0000
+Round 4, Client Loss: 0.0067, Client Accuracy: 1.0000
+Round 5, Client Loss: 0.0051, Client Accuracy: 1.0000
+Test Accuracy: 0.1073, Precision: 0.0115, Recall: 0.1073, F1-Score: 0.0208
+FLOPs: 278942211
+Latency: 16.3661 seconds

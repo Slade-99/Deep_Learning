@@ -3,7 +3,7 @@ from torchvision import transforms
 from PIL import Image
 
 
-image_path = '/home/azwad/Datasets/Benchmark_Dataset/Filtered/Images/COVID19(0).jpg'  
+image_path = '/home/azwad/Datasets/Shortened/test/PNEUMONIA/PNEUMONIA(3420).jpg'  
 image = Image.open(image_path)
 
 
