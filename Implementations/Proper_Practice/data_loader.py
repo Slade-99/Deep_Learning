@@ -14,8 +14,8 @@ import os
 
 
 class_names = ['normal', 'abnormal', 'pneumonia']
-train_dir = '/home/azwad/Works/Deep_Learning/Usable_Datasets/Private/train'
-test_dir = '/home/azwad/Works/Deep_Learning/Usable_Datasets/Private/test'
+train_dir = '/home/azwad/Downloads/Dataset Finalized-20241117T184900Z-001/Dataset Finalized/train'
+test_dir = '/home/azwad/Downloads/Dataset Finalized-20241117T184900Z-001/Dataset Finalized/test'
 
 
 
@@ -67,7 +67,7 @@ train_dataloader, test_dataloader, class_names = create_dataloaders(
     train_dir=train_dir,
     test_dir=test_dir,
     transform=new_transforms,
-    batch_size=2
+    batch_size=4
 )
 
 

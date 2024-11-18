@@ -1,0 +1,59 @@
+
+Input Image
+Stem Layer (Initial processing layer):
+Conv2d (3 → stem_channels//2) with kernel 3x3, stride 2
+Involution layer (stem_channels//2, kernel size 3)
+BatchNorm2d (stem_channels//2)
+ReLU
+Conv2d (stem_channels//2 → stem_channels) with kernel 3x3, stride 1
+Max Pooling (3x3, stride 2, padding 1)
+ResLayer 1 (Stage 1: First set of residual blocks)
+Multiple Bottleneck blocks (configured by depth and number of blocks)
+ResLayer 2 (Stage 2: Second set of residual blocks)
+Multiple Bottleneck blocks
+ResLayer 3 (Stage 3: Third set of residual blocks)
+Multiple Bottleneck blocks
+ResLayer 4 (Stage 4: Fourth set of residual blocks)
+Multiple Bottleneck blocks
+Output (Feature Maps)
+The network outputs feature maps from the stages specified in out_indices (e.g., stage 4, stage 3).
+So, the order from start to end is:
+
+
+
+
+
+
+
+
+
+
+1. First Convolution (Conv1):
+Type: 1x1 Convolution
+Input channels: in_channels
+Output channels: mid_channels (which is out_channels // expansion)
+Kernel size: 1x1
+Stride: Defined by conv1_stride:
+If style == 'pytorch', conv1_stride = 1
+If style == 'caffe', conv1_stride = stride
+Padding: 0 (as it's a 1x1 convolution)
+Bias: False (batch normalization is used instead)
+2. Involution Layer (Conv2):
+Type: Involution layer
+Input channels: mid_channels
+Output channels: mid_channels
+Kernel size: 7x7 (fixed in the implementation)
+Stride: Defined by conv2_stride:
+If style == 'pytorch', conv2_stride = stride
+If style == 'caffe', conv2_stride = 1
+Padding: 3 (to maintain spatial resolution if the stride is 1, with a kernel size of 7)
+Dilation: 1 (no dilation)
+Bias: False (since it's followed by a batch normalization layer)
+3. Third Convolution (Conv3):
+Type: 1x1 Convolution
+Input channels: mid_channels
+Output channels: out_channels
+Kernel size: 1x1
+Stride: 1 (since this layer is used for dimensionality expansion)
+Padding: 0 (as it's a 1x1 convolution)
+Bias: False (again, batch normalization is used)
