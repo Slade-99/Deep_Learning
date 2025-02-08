@@ -38,11 +38,11 @@ test_paths = []
 test_labels = []
 IMAGE_SIZE = 224
 NUM_CLIENTS = 10
-NUM_ROUNDS = 3
+NUM_ROUNDS = 5
 NUM_CLASSES = 3
 batch_size = 32
 steps = int(len(train_paths)/batch_size)
-epochs = 5
+epochs = 2
 
 
 
