@@ -1,0 +1,62 @@
+Training convnext_tiny on Private_CXR at 1740595531.939342
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740595571.8315876
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740595741.4346392
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740596071.8172798
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740596185.1720436
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740596628.6106958
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740596925.3668644
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 45.98
+Accuracy on validation set: 47.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 51.00
+Accuracy on validation set: 52.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 57.62
+Accuracy on validation set: 62.33%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 62.69
+Accuracy on validation set: 65.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 67.42
+Accuracy on validation set: 77.00%
+
+
+Accuracy on test set: 78.33
+
+
+

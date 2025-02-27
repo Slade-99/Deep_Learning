@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from inv import involution
+from Implementation_Phase.Ablation_Study.Model_Variants.inv import involution
 from torchsummary import summary
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -41,7 +41,9 @@ class block(nn.Module):
         x = self.bn3(x)
 
         if self.identity_downsample is not None:
+            
             identity = self.identity_downsample(identity)
+
 
         x += identity
         x = self.gelu(x)
@@ -49,7 +51,7 @@ class block(nn.Module):
 
 
 class INN_DWConv(nn.Module):
-    def __init__(self, block, layers, image_channels, num_classes):
+    def __init__(self, block, layers, image_channels, num_classes=3):
         super(INN_DWConv, self).__init__()
         self.in_channels = 64
         self.conv1 = nn.Conv2d(image_channels, 64, kernel_size=7, stride=2, padding=3, bias=False)
@@ -63,10 +65,10 @@ class INN_DWConv(nn.Module):
 
         
         self.layer1 = self._make_layer(
-            block, layers[0], intermediate_channels=64, stride=1 , type='inv'
+            block, layers[0], intermediate_channels=64, stride=1 , type='conv'
         )
         self.layer2 = self._make_layer(
-            block, layers[1], intermediate_channels=128, stride=1 , type = 'inv'
+            block, layers[1], intermediate_channels=128, stride=1 , type = 'conv'
         )
         self.layer3 = self._make_layer(
             block, layers[2], intermediate_channels=256, stride=2 , type='conv'
@@ -111,7 +113,7 @@ class INN_DWConv(nn.Module):
 
             
             layers.append(
-                block(self.in_channels, intermediate_channels, identity_downsample, stride=2,type=type)
+                block(self.in_channels, intermediate_channels, identity_downsample, stride,type=type)
             )
         else:
             
@@ -131,7 +133,7 @@ class INN_DWConv(nn.Module):
 
 
 def Stage_1_2(img_channel=1, num_classes=3):
-    return INN_DWConv(block, [3, 3, 4], img_channel, num_classes)
+    return INN_DWConv(block, [2, 2, 2], img_channel, num_classes)
 
 
 
@@ -285,9 +287,9 @@ class Custom_Architecture(nn.Module):
             h = x.register_hook(self.activations_hook)
         x = self.pooling(x).flatten(1)
 
-
+        
         x = self.classifier(x)
-
+        
         return x
 
 
@@ -318,6 +320,8 @@ def prepare_architecture():
 
 
 
-model = prepare_architecture().to(device)
+invo_sparse_net = prepare_architecture().to(device)
 #print(model)
-#summary(model, input_size =(1,224,224))
+summary(invo_sparse_net, input_size =(1,224,224))
+x = torch.rand(16,1,224,224).to(device)
+#print(invo_sparse_net(x).shape)

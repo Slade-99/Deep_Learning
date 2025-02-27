@@ -7,9 +7,6 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 
-
-
-
 architecture_configs = {
     'C': {
         'channels': (64,),

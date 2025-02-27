@@ -1,0 +1,46 @@
+Training mobilenet_v3_small on Private_CXR at 1740593627.4129086
+-----------------------------------------------
+
+
+Training mobilenet_v3_small on Private_CXR at 1740593639.7561352
+-----------------------------------------------
+
+
+Training mobilenet_v3_small on Private_CXR at 1740593683.6841192
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 57.56
+Accuracy on validation set: 62.50%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 67.63
+Accuracy on validation set: 74.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 74.25
+Accuracy on validation set: 80.17%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 78.73
+Accuracy on validation set: 84.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 80.33
+Accuracy on validation set: 84.67%
+
+
+Accuracy on test set: 86.17
+
+
+

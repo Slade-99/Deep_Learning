@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from inv import involution
+from Implementation_Phase.Ablation_Study.Model_Variants.inv import involution
 from torchsummary import summary
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -41,7 +41,9 @@ class block(nn.Module):
         x = self.bn3(x)
 
         if self.identity_downsample is not None:
+            
             identity = self.identity_downsample(identity)
+
 
         x += identity
         x = self.gelu(x)
@@ -111,7 +113,7 @@ class INN_DWConv(nn.Module):
 
             
             layers.append(
-                block(self.in_channels, intermediate_channels, identity_downsample, stride=2,type=type)
+                block(self.in_channels, intermediate_channels, identity_downsample, stride,type=type)
             )
         else:
             
@@ -131,7 +133,7 @@ class INN_DWConv(nn.Module):
 
 
 def Stage_1_2(img_channel=1, num_classes=3):
-    return INN_DWConv(block, [3, 3, 4], img_channel, num_classes)
+    return INN_DWConv(block, [2, 2, 2], img_channel, num_classes)
 
 
 
@@ -239,7 +241,7 @@ class ConvDownsampling(nn.Sequential):
 
 
 class Custom_Architecture(nn.Module):
-    def __init__(self, channels, blocks, heads, r=2, num_classes=3 ):
+    def __init__(self, channels, blocks, heads, r=2, num_classes=2 ):
         super().__init__()
         self.use_gradCAM = False
         self.gradients = None
@@ -318,6 +320,6 @@ def prepare_architecture():
 
 
 
-model = prepare_architecture().to(device)
+invo_sparse_net = prepare_architecture().to(device)
 #print(model)
-#summary(model, input_size =(1,224,224))
+#summary(invo_sparse_net, input_size =(1,224,224))

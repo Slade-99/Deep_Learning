@@ -1,0 +1,568 @@
+Training on variant 1 with 2Inv 2DWConv 2Inv layer arrangement with 2.212M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 67.79
+Accuracy on validation set: 76.50%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 81.60
+Accuracy on validation set: 88.50%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 87.90
+Accuracy on validation set: 92.33%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 91.90
+Accuracy on validation set: 92.83%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.38
+Accuracy on validation set: 94.67%
+
+
+
+Training on variant 2 with 2DWConv 2Inv 2Inv layer arrangement with 2.236M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 66.58
+Accuracy on validation set: 72.00%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 80.85
+Accuracy on validation set: 87.67%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 87.85
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 90.58
+Accuracy on validation set: 94.67%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 87.77
+Accuracy on validation set: 92.00%
+
+
+
+
+Training on variant 3 with 2Inv 2Inv 2DWConv layer arrangement with 2.113M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 57.23
+Accuracy on validation set: 65.83%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 69.94
+Accuracy on validation set: 75.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 77.15
+Accuracy on validation set: 80.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 83.29
+Accuracy on validation set: 90.17%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 82.67
+Accuracy on validation set: 89.33%
+
+
+
+
+
+Training on variant 4 with 2Inv 2DWConv 2Inv layer arrangement and MHSA with 2.515M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 69.27
+Accuracy on validation set: 72.00%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 81.62
+Accuracy on validation set: 88.50%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.44
+Accuracy on validation set: 91.50%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 89.08
+Accuracy on validation set: 92.00%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.15
+Accuracy on validation set: 93.83%
+
+
+
+
+
+
+Training on variant 5 with 2Inv 2DWConv 2Inv layer arrangement and Axial attention with 2.301M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 58.92
+Accuracy on validation set: 64.50%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 73.00
+Accuracy on validation set: 77.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 83.08
+Accuracy on validation set: 88.50%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.19
+Accuracy on validation set: 94.33%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 89.83
+Accuracy on validation set: 93.33%
+
+
+
+Training on variant 6 with 2DWConv 2DWConv 2DWConv layer arrangement 2M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 64.31
+Accuracy on validation set: 73.33%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 69.15
+Accuracy on validation set: 71.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 85.00
+Accuracy on validation set: 91.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 85.21
+Accuracy on validation set: 91.67%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 88.42
+Accuracy on validation set: 92.67%
+
+Training on variant 7 with 2Inv 2Inv 2Inv layer arrangement 2.243M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 61.52
+Accuracy on validation set: 66.17%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 75.10
+Accuracy on validation set: 85.83%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 83.38
+Accuracy on validation set: 91.33%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.27
+Accuracy on validation set: 91.17%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 89.98
+Accuracy on validation set: 94.50%
+
+
+
+Training on variant 11 with 2Conv 2Conv 2Inv layer arrangement 2.204M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 68.77
+Accuracy on validation set: 74.17%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 82.15
+Accuracy on validation set: 89.50%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 84.81
+Accuracy on validation set: 88.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 92.04
+Accuracy on validation set: 89.50%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.21
+Accuracy on validation set: 92.17%
+
+
+Accuracy on test set: 94.50
+
+
+
+Training on variant 12 with 2Inv 2Conv 2Conv  layer arrangement 2.081M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 66.77
+Accuracy on validation set: 74.83%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 78.69
+Accuracy on validation set: 85.50%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 84.10
+Accuracy on validation set: 89.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 88.54
+Accuracy on validation set: 92.83%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 89.94
+Accuracy on validation set: 94.67%
+
+
+
+Training on variant 13 with 2Conv 2Inv 2Conv  layer arrangement 2.1006M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 58.83
+Accuracy on validation set: 63.67%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 82.81
+Accuracy on validation set: 90.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.52
+Accuracy on validation set: 92.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 89.42
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.46
+Accuracy on validation set: 95.00%
+
+
+
+
+Training on variant 16 with 2Inv 2Conv 2Inv with DWConv kernel of size 9  layer arrangement 2.230M parameters
+
+-----------------------------------------------
+
+
+Training on variant 16 with 2Inv 2Conv 2Inv with DWConv kernel of size 9  layer arrangement 2.230M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 73.00
+Accuracy on validation set: 82.50%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 84.40
+Accuracy on validation set: 92.17%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.54
+Accuracy on validation set: 87.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 90.81
+Accuracy on validation set: 93.17%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 91.40
+Accuracy on validation set: 92.00%
+
+
+Accuracy on test set: 94.67
+
+
+
+Training on variant 15 with 2Inv 2Conv 2Inv with DWConv kernel of size 7  layer arrangement 2.222M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 68.23
+Accuracy on validation set: 71.33%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 84.96
+Accuracy on validation set: 92.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 87.94
+Accuracy on validation set: 92.50%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 90.56
+Accuracy on validation set: 94.33%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.79
+Accuracy on validation set: 92.67%
+
+
+Accuracy on test set: 93.67
+
+
+
+Training on variant 14 with 2Inv 2Conv 2Inv with DWConv kernel of size 5  layer arrangement 2.215M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 71.23
+Accuracy on validation set: 79.67%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 84.71
+Accuracy on validation set: 93.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 87.38
+Accuracy on validation set: 92.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 91.42
+Accuracy on validation set: 95.33%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.31
+Accuracy on validation set: 93.50%
+
+
+Accuracy on test set: 94.17
+
+
+
+Training on variant 10 with 2Inv 2Conv 2Inv with Inv kernel of size 3  layer arrangement 2.123M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 60.73
+Accuracy on validation set: 66.50%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 70.15
+Accuracy on validation set: 71.00%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 77.02
+Accuracy on validation set: 82.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 85.73
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 85.08
+Accuracy on validation set: 89.17%
+
+
+Accuracy on test set: 88.67
+
+
+
+Training on variant 8 with 2Inv 2Conv 2Inv with Inv kernel of size 9  layer arrangement 2.282M parameters
+
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 50.48
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 83.00
+Accuracy on validation set: 92.00%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 88.19
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 91.58
+Accuracy on validation set: 95.00%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 92.90
+Accuracy on validation set: 93.83%
+
+
+Accuracy on test set: 94.67
+
+
+
