@@ -1,0 +1,38 @@
+Training shufflenet_v2_x0_5 on Private_CXR at 1740706967.6190264
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 45.79
+Accuracy on validation set: 48.33%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 49.52
+Accuracy on validation set: 50.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 51.54
+Accuracy on validation set: 49.83%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 53.42
+Accuracy on validation set: 53.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 57.40
+Accuracy on validation set: 58.00%
+
+
+Accuracy on test set: 60.50
+
+
+

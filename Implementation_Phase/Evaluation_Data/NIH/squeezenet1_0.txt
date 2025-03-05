@@ -1,0 +1,44 @@
+Training squeezenet1_0 on NIH at 1741051531.916722
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 39.50
+Accuracy on validation set: 42.44%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 41.78
+Accuracy on validation set: 46.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 43.56
+Accuracy on validation set: 47.11%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 42.86
+Accuracy on validation set: 48.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 46.00
+Accuracy on validation set: 51.56%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 47.92
+Accuracy on validation set: 50.89%
+
+
+Accuracy on test set: 52.67
+
+
+

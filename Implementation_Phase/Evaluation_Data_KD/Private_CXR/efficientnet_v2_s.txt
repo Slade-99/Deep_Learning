@@ -1,0 +1,38 @@
+Training efficientnet_v2_s on Private_CXR at 1740699236.110215
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.10
+Accuracy on validation set: 44.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 67.25
+Accuracy on validation set: 70.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 81.33
+Accuracy on validation set: 88.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 87.19
+Accuracy on validation set: 95.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 90.60
+Accuracy on validation set: 95.17%
+
+
+Accuracy on test set: 95.83
+
+
+

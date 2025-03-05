@@ -1,0 +1,38 @@
+Training edgevitxxs on Private_CXR at 1740696945.8698814
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 71.62
+Accuracy on validation set: 76.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 78.92
+Accuracy on validation set: 80.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 84.04
+Accuracy on validation set: 88.17%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 87.56
+Accuracy on validation set: 87.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 89.52
+Accuracy on validation set: 88.67%
+
+
+Accuracy on test set: 90.33
+
+
+

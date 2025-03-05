@@ -4,8 +4,12 @@ import torch.nn.functional as F
 import torchvision.datasets as datasets  
 import torchvision.transforms as transforms  
 from torch import optim, nn  
-from torchvision.models import mobilenet_v3_small,convnext_tiny,efficientnet_v2_s,shufflenet_v2_x0_5,swin_v2_t,squeezenet1_0,densenet121
-from Implementation_Phase.Models.InvoSparseNet.model import invo_sparse_net
+from torchvision.models import mobilenet_v3_small,convnext_tiny,efficientnet_v2_s,shufflenet_v2_x0_5,squeezenet1_0,densenet121
+from Implementation_Phase.Models.InvoSparseNet.model_v2 import invo_sparse_net
+from Implementation_Phase.Models.MobileVitV2.model import mobilevitv2
+from Implementation_Phase.Models.CVT.model import cvt
+from Implementation_Phase.Models.EdgeVitXXS.model import edgevit
+from Implementation_Phase.Models.SwinV2.model import swinv2
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from torchsummary import summary
@@ -15,14 +19,17 @@ import numpy as np
 from PIL import Image
 import cv2
 
+
+
+
 sleeping = False
 load = False
 current_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dataset_list = ["Private_CXR","Retinal_OCT","Skin_Cancer_ISIC","Br34H","PC"]
-models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"swin_v2_t":swin_v2_t,"squeezeNet1_0":squeezenet1_0}
+models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"squeezeNet1_0":squeezenet1_0}
 dataset = "Private_CXR"
-selected_model = "densenet121"
+selected_model = "invo_sparse_net_v2"
 #model = models_list[selected_model]
 params_count = 0
 log_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/"+dataset+"/"+selected_model+".txt"
@@ -38,7 +45,7 @@ in_channels = 1
 num_classes = 3
 learning_rate = 0.00005
 batch_size = 16
-num_epochs = 200
+num_epochs = 50
 #########################
 
 
@@ -109,19 +116,39 @@ model = model.to(device)
 model = convnext_tiny(num_classes=3)
 model.features[0][0] = nn.Conv2d(1, 96, kernel_size=3, stride=2, padding=1, bias=False)
 model = model.to(device)
-"""
+
 model = densenet121(num_classes=3,)
 model.features[0] = nn.Conv2d(1, model.features[0].out_channels, kernel_size=7, stride=2, padding=3, bias=False)
 model = model.to(device)
+
+model = efficientnet_v2_s(num_classes=3,).to(device)
+model.features[0][0] = nn.Conv2d(1, 24, kernel_size=3, stride=2, padding=1, bias=False)
+
+model = shufflenet_v2_x0_5(num_classes=3).to(device)
+model.conv1[0] = nn.Conv2d(1,24,3,2,1,bias=False)
+
+
+model = squeezenet1_0(num_classes=3).to(device)
+model.features[0] = nn.Conv2d(1, 96, kernel_size=(7, 7), stride=(2, 2))
+
+
+model = mobilevitv2.to(device)
+
+model = edgevit.to(device)
+"""
+
+
+model = invo_sparse_net.to(device)
+#summary(model, input_size =(1,224,224))
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=1e-5)
 ################################
 
 
-def save_checkpoint(state,epoch):
+def save_checkpoint(state):
     save_dir = "/mnt/hdd/Trained_Weights/"+dataset+"/"+selected_model+"/"
     os.makedirs(os.path.dirname(save_dir), exist_ok=True)
-    filename=save_dir+selected_model+"_"+str(current_time)+str(epoch)
+    filename=save_dir+selected_model+"_"+str(current_time)
     filename = filename+".pth.tar"
     print("=>Saving checkpoint")
     torch.save(state,filename)
@@ -160,6 +187,7 @@ def check_accuracy(loader, model):
 
 # Train Network
 def train(model):
+    model = model.to(device)
     for epoch in range(1,num_epochs+1):
         for batch_idx, (data, targets) in enumerate(tqdm(train_loader)):
             
@@ -177,10 +205,11 @@ def train(model):
 
             # gradient descent or adam step
             optimizer.step()
-            if(batch_idx%10 == 0 and sleeping):
-                time.sleep(10)
+
         
-        if(epoch%20==0):
+        time.sleep(10)
+        
+        if(epoch%10==0):
             log_file.write(f"Results on epoch {epoch}\n")
             log_file.write("------------------------------\n")
             log_file.write(f"Accuracy on training set: {check_accuracy(train_loader, model)*100:.2f}\n")
@@ -188,7 +217,7 @@ def train(model):
             print(f"Accuracy on validation set: {check_accuracy(val_loader, model) * 100:.2f}%\n")
             log_file.write("\n\n")
             checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
-            save_checkpoint(checkpoint,epoch)
+            save_checkpoint(checkpoint)
             
             
 

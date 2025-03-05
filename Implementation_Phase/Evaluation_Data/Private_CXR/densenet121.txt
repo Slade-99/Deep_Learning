@@ -14,3 +14,71 @@ Training densenet121 on Private_CXR at 1740622294.1622849
 -----------------------------------------------
 
 
+Training densenet121 on Private_CXR at 1740622430.2474105
+-----------------------------------------------
+
+
+Training densenet121 on Private_CXR at 1740622689.5164115
+-----------------------------------------------
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 85.67
+Accuracy on validation set: 93.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 89.96
+Accuracy on validation set: 95.67%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 95.94
+Accuracy on validation set: 94.33%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 98.19
+Accuracy on validation set: 95.83%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 98.27
+Accuracy on validation set: 95.67%
+
+
+Results on epoch 120
+------------------------------
+Accuracy on training set: 99.19
+Accuracy on validation set: 96.17%
+
+
+Results on epoch 140
+------------------------------
+Accuracy on training set: 99.35
+Accuracy on validation set: 95.67%
+
+
+Results on epoch 160
+------------------------------
+Accuracy on training set: 98.27
+Accuracy on validation set: 96.33%
+
+
+Results on epoch 180
+------------------------------
+Accuracy on training set: 99.02
+Accuracy on validation set: 96.00%
+
+
+Results on epoch 200
+------------------------------
+Accuracy on training set: 99.58
+Accuracy on validation set: 96.83%
+
+

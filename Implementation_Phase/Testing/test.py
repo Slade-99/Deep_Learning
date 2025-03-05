@@ -1,7 +1,13 @@
 ####### Evalutions #######
-from Implementation_Phase.Models.InvoSparseNet.model import invo_sparse_net
+import torch 
+import torch.nn as nn
+from Implementation_Phase.Models.InvoSparseNet.model_v2 import invo_sparse_net
+from Implementation_Phase.Models.SwinV2.model import swinv2
+from Implementation_Phase.Models.MobileVitV2.model import mobilevitv2
 from torchvision.models import mobilenet_v3_small,convnext_tiny,efficientnet_v2_s,shufflenet_v2_x0_5,swin_v2_t,squeezenet1_0
 import torch
+from Implementation_Phase.Models.CVT.model import cvt
+from Implementation_Phase.Models.EdgeVitXXS.model import edgevit
 from torchsummary import summary
 import numpy as np
 from sklearn.preprocessing import label_binarize
@@ -20,12 +26,12 @@ import torchvision.datasets as datasets
 from PIL import Image
 import os
 import torch.nn.functional as F
+from thop import profile
 
 
-
-load = True
-model_name = "invo_sparse_net"
-dataset = "Private_CXR"
+load = False
+model_name = "invosparsenet"
+dataset = "NIH"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 log_file = '/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/'
 log_file_path = log_file + dataset+"/"+model_name+"_evaluation.txt"
@@ -33,6 +39,7 @@ batch_size = 16
 learning_rate = learning_rate = 0.00005
 
 data_dir = "/mnt/hdd/Datasets/" + dataset + "/"
+
 class CLAHETransform:
     def __call__(self, img):
         img = np.array(img)
@@ -84,66 +91,87 @@ def load_checkpoint(checkpoint,optimizer):
   print("=>Loading Checkpoint")
   model.load_state_dict(checkpoint['state_dict'])
   #optimizer.load_state_dict(checkpoint['optimizer'])
-    
+model.eval()
 if load:
-    model_path = '/mnt/hdd/Trained_Weights/Private_CXR/invo_sparse_net/invo_sparse_net_1740581115.7178764.pth.tar'
+    model_path = '/mnt/hdd/Trained_Weights/NIH/invo_sparse_net/invo_sparse_net_1741048105.95246.pth.tar'
     checkpoint = torch.load(model_path)
     load_checkpoint(checkpoint,optimizer)
-def softmax_with_temperature(logits, temperature=1.0):
-    """Applies softmax with temperature scaling."""
-    logits /= temperature
-    return torch.softmax(logits, dim=1)
-temperature = 1
-all_labels = []
-all_preds = []
-all_probs = []  # To store probabilities for ROC and AUROC
-
-model.eval()
-with torch.no_grad():
-    for images, labels in test_loader:
-        images, labels = images.to(device), labels.to(device)
-        outputs = model(images)
-        probs = softmax_with_temperature(outputs, temperature)
-        _, preds = torch.max(outputs, 1)
-
-        all_labels.extend(labels.cpu().numpy())
-        all_preds.extend(preds.cpu().numpy())
-        all_probs.extend(probs.cpu().numpy())
-
-
-
-class_names = sorted(np.unique(all_labels))  # Ensures consistency
-
-
-
-accuracy = accuracy_score(all_labels, all_preds)
-f1 = f1_score(all_labels, all_preds, average='weighted')
-precision = precision_score(all_labels, all_preds, average='weighted')
-recall = recall_score(all_labels, all_preds, average='weighted')
-
-sample_image, _ = test_loader.dataset[0]
-sample_image_pil = to_pil_image(sample_image)
-start_time = time.time()
-sample_image_transformed = data_transforms["test"](sample_image_pil)  # Apply transforms
-output = model(sample_image_transformed.unsqueeze(0).to(device))
-end_time = time.time()
-latency = end_time - start_time
 
 
 
 
+def eval_data(log_file_path,model,test_loader,data_transforms):
+    all_labels = []
+    all_preds = []
+    all_probs = []
 
-#flops = FlopCountAnalysis(global_model, torch.randn(1, 1, 224, 224).to(device))
-#summary(global_model, input_size=(1, 1, 224, 224), col_names=["input_size", "output_size", "num_params", "trainable"], depth=3)
-with open(log_file_path, 'a') as f:
-    f.write("\nFinal Evaluation :\n")
-    f.write("\n{description} :\n")
-    f.write(f"  - Accuracy: {accuracy:.4f}\n")
-    f.write(f"  - F1 Score: {f1:.4f}\n")
-    f.write(f"  - Precision: {precision:.4f}\n")
-    f.write(f"  - Recall: {recall:.4f}\n")
-    #f.write(f"  - FLOPs: {flops.total() / 1e9:.2f} GFLOPs\n")
-    f.write(f"  - Latency: {latency:.4f} s\n\n\n\n")
+    model.eval()
+    with torch.no_grad():
+        for images, labels in test_loader:
+            images, labels = images.to(device), labels.to(device)
+            outputs = model(images)
+            probs = torch.softmax(outputs, dim=1)
+            _, preds = torch.max(outputs, 1)
+
+            all_labels.extend(labels.cpu().numpy())
+            all_preds.extend(preds.cpu().numpy())
+            all_probs.extend(probs.cpu().numpy())
+
+
+
+    class_names = sorted(np.unique(all_labels))  # Ensures consistency
+
+
+
+    accuracy = accuracy_score(all_labels, all_preds)
+    f1 = f1_score(all_labels, all_preds, average='weighted')
+    precision = precision_score(all_labels, all_preds, average='weighted')
+    recall = recall_score(all_labels, all_preds, average='weighted')
+
+    sample_image, _ = test_loader.dataset[0]
+    sample_image_pil = to_pil_image(sample_image)
+    start_time = time.time()
+    sample_image_transformed = data_transforms["test"](sample_image_pil)  # Apply transforms
+    output = model(sample_image_transformed.unsqueeze(0).to(device))
+    end_time = time.time()
+    latency = end_time - start_time
+
+
+
+    input_tensor = torch.randn(1, 1, 224, 224).to(device)
+
+    # Calculate FLOPs and Parameters
+    flops, params = profile(model, inputs=(input_tensor,))
+
+    # Convert FLOPs to GFLOPs
+    gflops = flops / 1e9
+    params_million = params / 1e6  # Convert to million
+
+    # Print results
+    print(f"GFLOPs: {gflops:.2f} GFLOPs")
+    print(f"Parameters: {params_million:.2f} Million")
+
+
+
+
+
+
+    #flops = FlopCountAnalysis(global_model, torch.randn(1, 1, 224, 224).to(device))
+    #summary(global_model, input_size=(1, 1, 224, 224), col_names=["input_size", "output_size", "num_params", "trainable"], depth=3)
+
+    with open(log_file_path, 'a') as f:
+        f.write("\nFinal Evaluation :\n")
+        f.write("\n{description} :\n")
+        f.write(f"  - Accuracy: {accuracy:.4f}\n")
+        f.write(f"  - F1 Score: {f1:.4f}\n")
+        f.write(f"  - Precision: {precision:.4f}\n")
+        f.write(f"  - Recall: {recall:.4f}\n")
+        f.write(f"GFLOPs: {gflops:.2f} GFLOPs\n")
+        f.write(f"  - Latency: {latency:.4f} s\n\n\n\n")
+    
+    return all_labels,all_preds,all_probs
+
+all_labels,all_preds,all_probs = eval_data(log_file_path,model,test_loader,data_transforms)
 
 cm = confusion_matrix(all_labels, all_preds)
 plt.figure(figsize=(10, 7))

@@ -11,7 +11,7 @@ class CvT(nn.Module):
         # Load the CvT model configuration
         configuration = CvtConfig(num_channels=1 , num_labels = 3)
         self.CvT = CvtModel(configuration)
-        self.classifier = nn.Linear(384, 3)
+        self.classifier = nn.Linear(384, 11)
 
 
     def forward(self, x):
@@ -23,13 +23,13 @@ class CvT(nn.Module):
         logits = self.classifier(pooler_output)  # Pass through the classification head
         return logits
 
-model = CvT().to(device)
+cvt = CvT().to(device)
 
 # Total parameters (including trainable and non-trainable)
-total_params = sum(p.numel() for p in model.parameters())
+total_params = sum(p.numel() for p in cvt.parameters())
 
 # Only trainable parameters
-trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+trainable_params = sum(p.numel() for p in cvt.parameters() if p.requires_grad)
 
-print(f"Total Parameters: {total_params}")
-print(f"Trainable Parameters: {trainable_params}")
+#print(f"Total Parameters: {total_params}")
+#print(f"Trainable Parameters: {trainable_params}")

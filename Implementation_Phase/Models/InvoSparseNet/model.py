@@ -241,9 +241,9 @@ class ConvDownsampling(nn.Sequential):
 
 
 class Custom_Architecture(nn.Module):
-    def __init__(self, channels, blocks, heads, r=2, num_classes=3 ):
+    def __init__(self, channels, blocks, heads, r=2, num_classes=11 ):
         super().__init__()
-        self.use_gradCAM = True
+        self.use_gradCAM = False
         self.gradients = None
         l = []
         out_channels = 256

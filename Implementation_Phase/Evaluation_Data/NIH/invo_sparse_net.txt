@@ -1,0 +1,904 @@
+
+
+Training invo_sparse_net on NIH at 1740959979.4264455
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 35.15
+Accuracy on validation set: 35.05%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 45.41
+Accuracy on validation set: 43.36%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 50.21
+Accuracy on validation set: 45.85%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 52.99
+Accuracy on validation set: 47.18%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 53.67
+Accuracy on validation set: 49.00%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 55.06
+Accuracy on validation set: 46.51%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 53.94
+Accuracy on validation set: 51.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 55.75
+Accuracy on validation set: 48.84%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 54.63
+Accuracy on validation set: 47.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 60.79
+Accuracy on validation set: 52.16%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 63.98
+Accuracy on validation set: 52.66%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 64.98
+Accuracy on validation set: 51.83%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 66.68
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 74.09
+Accuracy on validation set: 54.15%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 66.14
+Accuracy on validation set: 47.84%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 76.27
+Accuracy on validation set: 52.66%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 74.63
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 83.15
+Accuracy on validation set: 52.66%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 68.09
+Accuracy on validation set: 51.50%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 80.73
+Accuracy on validation set: 48.67%
+
+
+Accuracy on test set: 49.42
+
+
+
+Training invo_sparse_net on NIH at 1740994303.3728654
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740994335.8761067
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740994486.8597856
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740994916.4293287
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740994935.9426758
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995031.5549312
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995051.980087
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995063.4971995
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995070.416844
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995077.3155916
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995084.1931205
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995250.5980835
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1740995361.5672128
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 42.17
+Accuracy on validation set: 42.19%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.62
+Accuracy on validation set: 48.50%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 51.65
+Accuracy on validation set: 47.84%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 55.97
+Accuracy on validation set: 51.00%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 60.55
+Accuracy on validation set: 53.99%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 64.12
+Accuracy on validation set: 53.49%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 69.72
+Accuracy on validation set: 53.99%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 72.36
+Accuracy on validation set: 51.50%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 77.73
+Accuracy on validation set: 53.82%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 80.24
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 79.83
+Accuracy on validation set: 52.33%
+
+
+Training invo_sparse_net on NIH at 1740997466.831897
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 28.20
+Accuracy on validation set: 26.74%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 32.60
+Accuracy on validation set: 35.55%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 41.21
+Accuracy on validation set: 42.86%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 44.80
+Accuracy on validation set: 46.84%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 47.98
+Accuracy on validation set: 49.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 50.07
+Accuracy on validation set: 50.33%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 52.29
+Accuracy on validation set: 51.66%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 55.82
+Accuracy on validation set: 49.83%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 57.40
+Accuracy on validation set: 53.32%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 58.68
+Accuracy on validation set: 53.99%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 58.52
+Accuracy on validation set: 50.50%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 63.21
+Accuracy on validation set: 51.33%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 64.20
+Accuracy on validation set: 51.66%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 67.32
+Accuracy on validation set: 53.16%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 68.15
+Accuracy on validation set: 50.83%
+
+
+Training invo_sparse_net on NIH at 1741000234.7328873
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 26.81
+Accuracy on validation set: 26.08%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 29.30
+Accuracy on validation set: 31.40%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 30.01
+Accuracy on validation set: 31.56%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 31.09
+Accuracy on validation set: 31.40%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 31.87
+Accuracy on validation set: 32.89%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 32.52
+Accuracy on validation set: 33.89%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 33.41
+Accuracy on validation set: 33.06%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 33.68
+Accuracy on validation set: 37.04%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 35.90
+Accuracy on validation set: 36.88%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 38.20
+Accuracy on validation set: 38.21%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 39.20
+Accuracy on validation set: 40.37%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 39.43
+Accuracy on validation set: 40.70%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 41.00
+Accuracy on validation set: 41.69%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 42.23
+Accuracy on validation set: 41.20%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 42.15
+Accuracy on validation set: 44.19%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 43.12
+Accuracy on validation set: 44.19%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 43.81
+Accuracy on validation set: 43.02%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 44.62
+Accuracy on validation set: 46.35%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 44.55
+Accuracy on validation set: 46.51%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 45.11
+Accuracy on validation set: 45.85%
+
+
+Accuracy on test set: 44.79
+
+
+
+Training invo_sparse_net on NIH at 1741004126.3944693
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 45.84
+Accuracy on validation set: 46.01%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 46.65
+Accuracy on validation set: 48.34%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 45.51
+Accuracy on validation set: 47.01%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 47.29
+Accuracy on validation set: 46.01%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 47.44
+Accuracy on validation set: 48.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 48.02
+Accuracy on validation set: 48.34%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 49.53
+Accuracy on validation set: 49.34%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 49.99
+Accuracy on validation set: 49.34%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 50.26
+Accuracy on validation set: 49.17%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 49.82
+Accuracy on validation set: 50.33%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 49.95
+Accuracy on validation set: 50.66%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 51.07
+Accuracy on validation set: 50.00%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 52.38
+Accuracy on validation set: 50.00%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 52.09
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 52.17
+Accuracy on validation set: 51.50%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 52.92
+Accuracy on validation set: 51.00%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 53.79
+Accuracy on validation set: 49.34%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 53.31
+Accuracy on validation set: 49.83%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 53.23
+Accuracy on validation set: 52.49%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 54.53
+Accuracy on validation set: 50.66%
+
+
+Accuracy on test set: 53.22
+
+
+
+Training invo_sparse_net on NIH at 1741007851.8811123
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 54.89
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 54.91
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 56.40
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 56.09
+Accuracy on validation set: 51.50%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 56.63
+Accuracy on validation set: 51.83%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 57.17
+Accuracy on validation set: 52.82%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 55.92
+Accuracy on validation set: 49.83%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 57.15
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 57.85
+Accuracy on validation set: 51.99%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 58.27
+Accuracy on validation set: 52.16%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 59.04
+Accuracy on validation set: 50.66%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 59.06
+Accuracy on validation set: 49.00%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 59.89
+Accuracy on validation set: 51.33%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 60.10
+Accuracy on validation set: 51.00%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 59.29
+Accuracy on validation set: 52.16%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 60.10
+Accuracy on validation set: 53.16%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 61.78
+Accuracy on validation set: 51.99%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 60.41
+Accuracy on validation set: 51.99%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 60.99
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 62.54
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 105
+------------------------------
+Accuracy on training set: 62.27
+Accuracy on validation set: 49.50%
+
+
+Results on epoch 110
+------------------------------
+Accuracy on training set: 62.44
+Accuracy on validation set: 50.00%
+
+
+Results on epoch 115
+------------------------------
+Accuracy on training set: 62.90
+Accuracy on validation set: 52.33%
+
+
+Results on epoch 120
+------------------------------
+Accuracy on training set: 64.06
+Accuracy on validation set: 51.33%
+
+
+Training invo_sparse_net on NIH at 1741013095.3505855
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013393.9435117
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013412.0959036
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013434.2964888
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013467.7103674
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013559.1881137
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741013611.6846936
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741014480.4595075
+-----------------------------------------------
+
+
+Training invo_sparse_net on NIH at 1741015466.1743877
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 45.14
+Accuracy on validation set: 43.71%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.75
+Accuracy on validation set: 44.92%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 52.54
+Accuracy on validation set: 46.28%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 55.10
+Accuracy on validation set: 48.28%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 55.05
+Accuracy on validation set: 49.79%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 58.44
+Accuracy on validation set: 49.57%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 61.36
+Accuracy on validation set: 48.86%
+
+
+Training invo_sparse_net on NIH at 1741048105.95246
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 42.92
+Accuracy on validation set: 46.00%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.11
+Accuracy on validation set: 49.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 52.47
+Accuracy on validation set: 57.11%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 56.17
+Accuracy on validation set: 61.56%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 58.64
+Accuracy on validation set: 60.22%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 60.83
+Accuracy on validation set: 62.00%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 61.64
+Accuracy on validation set: 61.56%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 62.36
+Accuracy on validation set: 66.89%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 63.03
+Accuracy on validation set: 64.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 65.00
+Accuracy on validation set: 68.00%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 66.39
+Accuracy on validation set: 67.11%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 66.53
+Accuracy on validation set: 67.11%
+
+
+Accuracy on test set: 63.56
+
+
+

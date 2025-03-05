@@ -1,0 +1,12 @@
+Training convnext_tiny on Private_CXR at 1740714631.2732463
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740764651.3775806
+-----------------------------------------------
+
+
+Training convnext_tiny on Private_CXR at 1740764943.6144333
+-----------------------------------------------
+
+

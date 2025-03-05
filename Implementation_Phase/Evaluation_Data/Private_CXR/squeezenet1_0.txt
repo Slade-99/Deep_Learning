@@ -1,0 +1,88 @@
+Training squeezenet1_0 on Private_CXR at 1740661896.8305585
+-----------------------------------------------
+
+
+Training squeezenet1_0 on Private_CXR at 1740661971.410339
+-----------------------------------------------
+
+
+Training squeezenet1_0 on Private_CXR at 1740661992.379739
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.48
+Accuracy on validation set: 48.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 51.38
+Accuracy on validation set: 57.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 61.19
+Accuracy on validation set: 59.83%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 64.85
+Accuracy on validation set: 72.17%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 66.27
+Accuracy on validation set: 71.17%
+
+
+Accuracy on test set: 73.67
+
+
+
+Training squeezenet1_0 on Private_CXR at 1740759267.9642644
+-----------------------------------------------
+
+
+Training squeezenet1_0 on Private_CXR at 1740759307.7662876
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 49.40
+Accuracy on validation set: 52.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 60.90
+Accuracy on validation set: 63.83%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 62.79
+Accuracy on validation set: 64.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 69.50
+Accuracy on validation set: 74.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.15
+Accuracy on validation set: 74.83%
+
+
+Accuracy on test set: 80.33
+
+
+

@@ -1,0 +1,13 @@
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.3177
+  - F1 Score: 0.1532
+  - Precision: 0.1010
+  - Recall: 0.3177
+GFLOPs: 3.17 GFLOPs
+  - Latency: 0.0283 s
+
+
+

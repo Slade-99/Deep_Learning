@@ -1,0 +1,54 @@
+Training shufflenet_v2_x0_5 on Private_CXR at 1740655088.4428446
+-----------------------------------------------
+
+
+Training shufflenet_v2_x0_5 on Private_CXR at 1740655245.746267
+-----------------------------------------------
+
+
+Training shufflenet_v2_x0_5 on Private_CXR at 1740655442.5105987
+-----------------------------------------------
+
+
+Training shufflenet_v2_x0_5 on Private_CXR at 1740655543.8853717
+-----------------------------------------------
+
+
+Training shufflenet_v2_x0_5 on Private_CXR at 1740655674.1451473
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 44.73
+Accuracy on validation set: 43.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 48.27
+Accuracy on validation set: 48.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 50.42
+Accuracy on validation set: 49.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 54.06
+Accuracy on validation set: 54.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 55.15
+Accuracy on validation set: 58.33%
+
+
+Accuracy on test set: 59.17
+
+
+

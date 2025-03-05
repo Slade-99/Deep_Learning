@@ -1,0 +1,238 @@
+Training invo_sparse_net_v2 on Private_CXR at 1740930432.636169
+-----------------------------------------------
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740930478.9592884
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 51.48
+Accuracy on validation set: 54.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 60.58
+Accuracy on validation set: 65.83%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 63.75
+Accuracy on validation set: 68.33%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 69.23
+Accuracy on validation set: 72.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 69.90
+Accuracy on validation set: 73.33%
+
+
+Accuracy on test set: 75.00
+
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740932520.054832
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 49.83
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 59.83
+Accuracy on validation set: 63.33%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 66.31
+Accuracy on validation set: 69.67%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 64.88
+Accuracy on validation set: 72.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.17
+Accuracy on validation set: 74.17%
+
+
+Accuracy on test set: 76.00
+
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740934788.3111224
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 49.27
+Accuracy on validation set: 50.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 63.58
+Accuracy on validation set: 65.33%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 66.27
+Accuracy on validation set: 67.83%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 68.06
+Accuracy on validation set: 77.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.98
+Accuracy on validation set: 71.67%
+
+
+Accuracy on test set: 73.67
+
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740936692.9865913
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.92
+Accuracy on validation set: 50.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 54.46
+Accuracy on validation set: 57.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 61.29
+Accuracy on validation set: 65.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 67.02
+Accuracy on validation set: 68.17%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 71.56
+Accuracy on validation set: 76.83%
+
+
+Accuracy on test set: 79.17
+
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740954358.4943366
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 51.81
+Accuracy on validation set: 52.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 62.31
+Accuracy on validation set: 64.33%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 65.33
+Accuracy on validation set: 73.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 67.42
+Accuracy on validation set: 73.17%
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740955893.191578
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 73.77
+Accuracy on validation set: 76.50%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 85.23
+Accuracy on validation set: 91.50%
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740956749.0071251
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 76.60
+Accuracy on validation set: 83.00%
+
+
+Training invo_sparse_net_v2 on Private_CXR at 1740957230.6291735
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 75.79
+Accuracy on validation set: 83.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.17
+Accuracy on validation set: 94.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 87.50
+Accuracy on validation set: 91.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 92.96
+Accuracy on validation set: 93.50%
+
+

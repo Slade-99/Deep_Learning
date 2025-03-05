@@ -1,0 +1,114 @@
+Training squeezenet1_0 on Private_CXR at 1740709248.7610452
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 53.88
+Accuracy on validation set: 57.33%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 61.08
+Accuracy on validation set: 66.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 67.23
+Accuracy on validation set: 72.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 69.56
+Accuracy on validation set: 73.50%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 73.15
+Accuracy on validation set: 79.83%
+
+
+Accuracy on test set: 81.83
+
+
+
+Training squeezenet1_0 on Private_CXR at 1740762307.1939473
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 47.83
+Accuracy on validation set: 47.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 58.90
+Accuracy on validation set: 63.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 62.63
+Accuracy on validation set: 66.17%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 66.48
+Accuracy on validation set: 69.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.75
+Accuracy on validation set: 75.33%
+
+
+Accuracy on test set: 76.17
+
+
+
+Training squeezenet1_0 on Private_CXR at 1740765377.3623931
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 52.81
+Accuracy on validation set: 55.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 56.44
+Accuracy on validation set: 61.17%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 64.79
+Accuracy on validation set: 69.33%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 69.00
+Accuracy on validation set: 72.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 71.96
+Accuracy on validation set: 75.83%
+
+
+Accuracy on test set: 77.67
+
+
+

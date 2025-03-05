@@ -1,0 +1,44 @@
+Training shufflenet_v2_x0_5 on NIH at 1741050590.8898675
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 33.61
+Accuracy on validation set: 34.89%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 37.53
+Accuracy on validation set: 35.11%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 39.03
+Accuracy on validation set: 37.33%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 40.50
+Accuracy on validation set: 42.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 41.86
+Accuracy on validation set: 46.67%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 43.50
+Accuracy on validation set: 47.56%
+
+
+Accuracy on test set: 44.89
+
+
+

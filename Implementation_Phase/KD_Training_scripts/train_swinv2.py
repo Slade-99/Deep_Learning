@@ -4,8 +4,12 @@ import torch.nn.functional as F
 import torchvision.datasets as datasets  
 import torchvision.transforms as transforms  
 from torch import optim, nn  
-from torchvision.models import mobilenet_v3_small,convnext_tiny,efficientnet_v2_s,shufflenet_v2_x0_5,swin_v2_t,squeezenet1_0
+from torchvision.models import mobilenet_v3_small,convnext_tiny,efficientnet_v2_s,shufflenet_v2_x0_5,squeezenet1_0,densenet121
 from Implementation_Phase.Models.InvoSparseNet.model import invo_sparse_net
+from Implementation_Phase.Models.MobileVitV2.model import mobilevitv2
+from Implementation_Phase.Models.CVT.model import cvt
+from Implementation_Phase.Models.EdgeVitXXS.model import edgevit
+from Implementation_Phase.Models.SwinV2.model import swinv2
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from torchsummary import summary
@@ -15,17 +19,20 @@ import numpy as np
 from PIL import Image
 import cv2
 
-sleeping = True
+
+
+
+sleeping = False
 load = False
 current_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dataset_list = ["Private_CXR","Retinal_OCT","Skin_Cancer_ISIC","Br34H","PC"]
-models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"swin_v2_t":swin_v2_t,"squeezeNet1_0":squeezenet1_0}
+models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"squeezeNet1_0":squeezenet1_0}
 dataset = "Private_CXR"
-selected_model = "invo_sparse_net"
-model = models_list[selected_model]
+selected_model = "swinv2"
+#model = models_list[selected_model]
 params_count = 0
-log_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/"+dataset+"/"+selected_model+".txt"
+log_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data_KD/"+dataset+"/"+selected_model+".txt"
 os.makedirs(os.path.dirname(log_dir), exist_ok=True)
 log_file = open(log_dir,"a")
 log_file.write(f"Training {selected_model} on {dataset} at {current_time}\n")
@@ -102,18 +109,44 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 ###### Model Preparation #######
 """
-model = mobilenet_v2(num_classes=3)
-model.features[0][0] = nn.Conv2d(1, 32, kernel_size=3, stride=2, padding=1, bias=False)
+model = mobilenet_v3_small(num_classes=3)
+model.features[0][0] = nn.Conv2d(1, 16, kernel_size=3, stride=2, padding=1, bias=False)
 model = model.to(device)
+
+model = convnext_tiny(num_classes=3)
+model.features[0][0] = nn.Conv2d(1, 96, kernel_size=3, stride=2, padding=1, bias=False)
+model = model.to(device)
+
+model = densenet121(num_classes=3,)
+model.features[0] = nn.Conv2d(1, model.features[0].out_channels, kernel_size=7, stride=2, padding=3, bias=False)
+model = model.to(device)
+
+model = efficientnet_v2_s(num_classes=3,).to(device)
+model.features[0][0] = nn.Conv2d(1, 24, kernel_size=3, stride=2, padding=1, bias=False)
+
+model = shufflenet_v2_x0_5(num_classes=3).to(device)
+model.conv1[0] = nn.Conv2d(1,24,3,2,1,bias=False)
+
+
+model = squeezenet1_0(num_classes=3).to(device)
+model.features[0] = nn.Conv2d(1, 96, kernel_size=(7, 7), stride=(2, 2))
+
+
+model = mobilevitv2.to(device)
+
+model = edgevit.to(device)
+model = swinv2.to(device)
 """
-model = model.to(device)
+
+model = swinv2.to(device)
+
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=1e-5)
 ################################
 
 
 def save_checkpoint(state):
-    save_dir = "/mnt/hdd/Trained_Weights/"+dataset+"/"+selected_model+"/"
+    save_dir = "/mnt/hdd/Trained_Weights_KD/"+dataset+"/"+selected_model+"/"
     os.makedirs(os.path.dirname(save_dir), exist_ok=True)
     filename=save_dir+selected_model+"_"+str(current_time)
     filename = filename+".pth.tar"
@@ -153,43 +186,83 @@ def check_accuracy(loader, model):
 
 
 # Train Network
+
+
+
+teacher_model = densenet121(num_classes=3,)  
+teacher_model.features[0] = nn.Conv2d(1, teacher_model.features[0].out_channels, kernel_size=7, stride=2, padding=3, bias=False)
+checkpoint_path = "/mnt/hdd/Trained_Weights/Private_CXR/densenet121/densenet121_1740622689.5164115160.pth.tar"
+checkpoint = torch.load(checkpoint_path, map_location=device)
+
+# Load teacher model weights
+teacher_model.load_state_dict(checkpoint["state_dict"])
+teacher_model.eval()  
+teacher_model = teacher_model.to(device)
+
+# Temperature for softening logits
+T = 4.0  
+alpha = 0.7  # Weight for distillation loss
+
+def distillation_loss(student_logits, teacher_logits, targets, alpha, T):
+    """
+    Compute knowledge distillation loss.
+    """
+    # Soft targets loss (KL Divergence with temperature scaling)
+    soft_targets = F.kl_div(
+        F.log_softmax(student_logits / T, dim=1),
+        F.softmax(teacher_logits / T, dim=1),
+        reduction="batchmean"
+    ) * (T * T)
+
+    # Hard targets loss (standard cross-entropy)
+    hard_targets = F.cross_entropy(student_logits, targets)
+
+    # Combined loss
+    return alpha * soft_targets + (1 - alpha) * hard_targets
+
 def train(model):
-    for epoch in range(num_epochs):
+    model = model.to(device)
+    for epoch in range(1, num_epochs + 1):
+        model.train()
         for batch_idx, (data, targets) in enumerate(tqdm(train_loader)):
-            
-            # Get data to cuda if possible
-            data = data.to(device=device)
-            targets = targets.to(device=device)
 
-            # forward
-            scores = model(data)
-            loss = criterion(scores, targets)
+            # Move to device
+            data, targets = data.to(device), targets.to(device)
 
-            # backward
+            # Forward pass (student model)
+            student_logits = model(data)
+
+            # Forward pass (teacher model, no gradient computation)
+            with torch.no_grad():
+                teacher_logits = teacher_model(data)
+
+            # Compute loss
+            loss = distillation_loss(student_logits, teacher_logits, targets, alpha, T)
+
+            # Backward pass
             optimizer.zero_grad()
             loss.backward()
-
-            # gradient descent or adam step
             optimizer.step()
-            if(batch_idx%100 == 0 and sleeping):
-                time.sleep(3)
-        
-        if(epoch%10==0):
-            log_file.write(f"Results on epoch {epoch+1}\n")
+
+            if batch_idx % 10 == 0 and sleeping:
+                time.sleep(10)
+
+        time.sleep(10)
+
+        if epoch % 10 == 0:
+            log_file.write(f"Results on epoch {epoch}\n")
             log_file.write("------------------------------\n")
             log_file.write(f"Accuracy on training set: {check_accuracy(train_loader, model)*100:.2f}\n")
             log_file.write(f"Accuracy on validation set: {check_accuracy(val_loader, model) * 100:.2f}%\n")
+            print(f"Accuracy on validation set: {check_accuracy(val_loader, model) * 100:.2f}%\n")
             log_file.write("\n\n")
+
             checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
             save_checkpoint(checkpoint)
-            
-            
-
-
-
 
     log_file.write(f"Accuracy on test set: {check_accuracy(test_loader, model)*100:.2f}")
     log_file.write("\n\n\n\n")
     log_file.close()
-    
+    time.sleep(120)
+
 train(model)

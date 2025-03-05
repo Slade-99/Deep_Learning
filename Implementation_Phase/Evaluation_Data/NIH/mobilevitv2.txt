@@ -1,0 +1,440 @@
+Training mobilevitv2 on NIH at 1741026913.0376606
+-----------------------------------------------
+
+
+Training mobilevitv2 on NIH at 1741026941.6180723
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 47.44
+Accuracy on validation set: 47.11%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 50.06
+Accuracy on validation set: 55.11%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 51.69
+Accuracy on validation set: 56.89%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 54.56
+Accuracy on validation set: 59.33%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 54.14
+Accuracy on validation set: 58.89%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 55.58
+Accuracy on validation set: 61.33%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 57.14
+Accuracy on validation set: 61.78%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 58.44
+Accuracy on validation set: 62.00%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 59.75
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 60.50
+Accuracy on validation set: 63.78%
+
+
+Accuracy on test set: 64.00
+
+
+
+Training mobilevitv2 on NIH at 1741027666.4380383
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 46.75
+Accuracy on validation set: 51.33%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.33
+Accuracy on validation set: 51.33%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 53.47
+Accuracy on validation set: 52.44%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 52.89
+Accuracy on validation set: 56.89%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 55.39
+Accuracy on validation set: 60.44%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 57.14
+Accuracy on validation set: 62.22%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 57.72
+Accuracy on validation set: 60.89%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 58.33
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 59.86
+Accuracy on validation set: 65.78%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 60.19
+Accuracy on validation set: 61.78%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 62.33
+Accuracy on validation set: 65.11%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 63.08
+Accuracy on validation set: 64.44%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 64.00
+Accuracy on validation set: 66.22%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 63.83
+Accuracy on validation set: 64.67%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 63.89
+Accuracy on validation set: 61.78%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 65.50
+Accuracy on validation set: 64.67%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 66.61
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 68.31
+Accuracy on validation set: 64.22%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 68.58
+Accuracy on validation set: 64.00%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 68.61
+Accuracy on validation set: 64.67%
+
+
+Results on epoch 105
+------------------------------
+Accuracy on training set: 70.64
+Accuracy on validation set: 61.56%
+
+
+Results on epoch 110
+------------------------------
+Accuracy on training set: 71.03
+Accuracy on validation set: 62.00%
+
+
+Results on epoch 115
+------------------------------
+Accuracy on training set: 73.47
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 120
+------------------------------
+Accuracy on training set: 72.61
+Accuracy on validation set: 64.22%
+
+
+Results on epoch 125
+------------------------------
+Accuracy on training set: 74.17
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 130
+------------------------------
+Accuracy on training set: 74.72
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 135
+------------------------------
+Accuracy on training set: 74.58
+Accuracy on validation set: 62.44%
+
+
+Results on epoch 140
+------------------------------
+Accuracy on training set: 76.50
+Accuracy on validation set: 63.56%
+
+
+Results on epoch 145
+------------------------------
+Accuracy on training set: 76.28
+Accuracy on validation set: 63.78%
+
+
+Results on epoch 150
+------------------------------
+Accuracy on training set: 77.81
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 155
+------------------------------
+Accuracy on training set: 80.28
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 160
+------------------------------
+Accuracy on training set: 80.92
+Accuracy on validation set: 66.89%
+
+
+Results on epoch 165
+------------------------------
+Accuracy on training set: 80.97
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 170
+------------------------------
+Accuracy on training set: 82.44
+Accuracy on validation set: 65.78%
+
+
+Results on epoch 175
+------------------------------
+Accuracy on training set: 84.00
+Accuracy on validation set: 63.78%
+
+
+Results on epoch 180
+------------------------------
+Accuracy on training set: 83.22
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 185
+------------------------------
+Accuracy on training set: 84.42
+Accuracy on validation set: 62.00%
+
+
+Results on epoch 190
+------------------------------
+Accuracy on training set: 84.81
+Accuracy on validation set: 65.56%
+
+
+Results on epoch 195
+------------------------------
+Accuracy on training set: 85.69
+Accuracy on validation set: 65.33%
+
+
+Results on epoch 200
+------------------------------
+Accuracy on training set: 87.19
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 205
+------------------------------
+Accuracy on training set: 87.33
+Accuracy on validation set: 63.11%
+
+
+Results on epoch 210
+------------------------------
+Accuracy on training set: 87.97
+Accuracy on validation set: 65.78%
+
+
+Results on epoch 215
+------------------------------
+Accuracy on training set: 89.22
+Accuracy on validation set: 64.67%
+
+
+Results on epoch 220
+------------------------------
+Accuracy on training set: 88.36
+Accuracy on validation set: 65.33%
+
+
+Results on epoch 225
+------------------------------
+Accuracy on training set: 89.44
+Accuracy on validation set: 62.89%
+
+
+Results on epoch 230
+------------------------------
+Accuracy on training set: 89.61
+Accuracy on validation set: 64.22%
+
+
+Results on epoch 235
+------------------------------
+Accuracy on training set: 91.75
+Accuracy on validation set: 63.78%
+
+
+Results on epoch 240
+------------------------------
+Accuracy on training set: 90.78
+Accuracy on validation set: 63.78%
+
+
+Results on epoch 245
+------------------------------
+Accuracy on training set: 92.72
+Accuracy on validation set: 64.67%
+
+
+Results on epoch 250
+------------------------------
+Accuracy on training set: 92.97
+Accuracy on validation set: 64.22%
+
+
+Results on epoch 255
+------------------------------
+Accuracy on training set: 92.33
+Accuracy on validation set: 63.56%
+
+
+Results on epoch 260
+------------------------------
+Accuracy on training set: 92.67
+Accuracy on validation set: 62.00%
+
+
+Results on epoch 265
+------------------------------
+Accuracy on training set: 93.58
+Accuracy on validation set: 63.33%
+
+
+Results on epoch 270
+------------------------------
+Accuracy on training set: 93.39
+Accuracy on validation set: 64.44%
+
+
+Results on epoch 275
+------------------------------
+Accuracy on training set: 92.64
+Accuracy on validation set: 63.33%
+
+
+Results on epoch 280
+------------------------------
+Accuracy on training set: 94.64
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 285
+------------------------------
+Accuracy on training set: 95.06
+Accuracy on validation set: 65.33%
+
+
+Results on epoch 290
+------------------------------
+Accuracy on training set: 95.19
+Accuracy on validation set: 64.89%
+
+
+Results on epoch 295
+------------------------------
+Accuracy on training set: 95.17
+Accuracy on validation set: 65.78%
+
+
+Results on epoch 300
+------------------------------
+Accuracy on training set: 95.67
+Accuracy on validation set: 65.11%
+
+
+Accuracy on test set: 65.11
+
+
+

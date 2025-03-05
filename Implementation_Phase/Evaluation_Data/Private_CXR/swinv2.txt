@@ -1,0 +1,58 @@
+Training swinv2 on Private_CXR at 1740686548.87624
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 50.69
+Accuracy on validation set: 51.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 57.54
+Accuracy on validation set: 57.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 63.50
+Accuracy on validation set: 71.17%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 68.27
+Accuracy on validation set: 71.67%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 69.65
+Accuracy on validation set: 74.67%
+
+
+Accuracy on test set: 77.83
+
+
+
+Training swinv2 on Private_CXR at 1740758860.695259
+-----------------------------------------------
+
+
+Training swinv2 on Private_CXR at 1740758897.4259
+-----------------------------------------------
+
+
+Training swinv2 on Private_CXR at 1740759095.7056043
+-----------------------------------------------
+
+
+Training swinv2 on Private_CXR at 1740759139.4534423
+-----------------------------------------------
+
+
+Training swinv2 on Private_CXR at 1740759189.2346444
+-----------------------------------------------
+
+

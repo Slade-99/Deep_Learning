@@ -1,0 +1,50 @@
+import pandas as pd
+import os
+import shutil
+
+def organize_images_by_class(csv_path, image_dir, output_dir):
+    """
+    Organizes images into separate folders based on their class labels.
+
+    Args:
+        csv_path (str): Path to the finalized CSV file.
+        image_dir (str): Path to the directory containing the images.
+        output_dir (str): Path to the output directory where class folders will be created.
+    """
+
+    try:
+        df = pd.read_csv(csv_path)
+    except FileNotFoundError:
+        print(f"Error: CSV file not found at {csv_path}")
+        return
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for index, row in df.iterrows():
+        image_filename = row.iloc[0] #image filename column
+        label = row.iloc[1] #label column
+        source_path = os.path.join(image_dir, image_filename)
+        destination_dir = os.path.join(output_dir, str(label)) #make label into a string, just in case.
+
+        if not os.path.exists(destination_dir):
+            os.makedirs(destination_dir)
+
+        destination_path = os.path.join(destination_dir, image_filename)
+
+        try:
+            shutil.copy2(source_path, destination_path) #copy the file.
+            #shutil.move(source_path, destination_path) #uncomment this to move files instead of copying.
+        except FileNotFoundError:
+            print(f"Error: Image file not found at {source_path}")
+        except Exception as e:
+            print(f"An error occurred while processing {image_filename}: {e}")
+
+    print("Image organization complete.")
+
+# Example Usage:
+csv_file = '/mnt/hdd/dataset_collections/Data_Entry_2017_5.csv'  # Replace with your CSV file path
+images_folder = '/mnt/hdd/dataset_collections/NIH/NIH/images-224'  # Replace with your image directory path
+output_folder = '/mnt/hdd/dataset_collections/NIH_Filtered'  # Replace with your desired output directory
+
+organize_images_by_class(csv_file, images_folder, output_folder)

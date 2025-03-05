@@ -22,13 +22,13 @@ class MobileViTV2(nn.Module):
         logits = self.classifier(pooler_output)  # Pass through the classification head
         return logits
 
-model = MobileViTV2(3).to(device)
+mobilevitv2 = MobileViTV2(3).to(device)
 
 # Total parameters (including trainable and non-trainable)
-total_params = sum(p.numel() for p in model.parameters())
+total_params = sum(p.numel() for p in mobilevitv2.parameters())
 
 # Only trainable parameters
-trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+trainable_params = sum(p.numel() for p in mobilevitv2.parameters() if p.requires_grad)
 
-print(f"Total Parameters: {total_params}")
-print(f"Trainable Parameters: {trainable_params}")
+#print(f"Total Parameters: {total_params}")
+#print(f"Trainable Parameters: {trainable_params}")

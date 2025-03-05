@@ -1,0 +1,38 @@
+Training MobileViTV2 on Private_CXR at 1740669691.015083
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 74.35
+Accuracy on validation set: 80.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 85.69
+Accuracy on validation set: 88.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 88.50
+Accuracy on validation set: 89.33%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 92.00
+Accuracy on validation set: 90.17%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 94.31
+Accuracy on validation set: 92.83%
+
+
+Accuracy on test set: 94.83
+
+
+

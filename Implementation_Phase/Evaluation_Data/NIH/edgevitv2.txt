@@ -1,0 +1,96 @@
+Training edgevitv2 on NIH at 1740881113.9946144
+-----------------------------------------------
+
+
+Training edgevitv2 on NIH at 1740881171.3137248
+-----------------------------------------------
+
+
+Training edgevitv2 on NIH at 1740881238.9924734
+-----------------------------------------------
+
+
+Training edgevitv2 on NIH at 1740881477.7730806
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 30.68
+Training edgevitv2 on NIH at 1740882894.8428621
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 31.22
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 33.99
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 36.77
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 40.49
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 44.75
+
+
+Accuracy on test set: 31.10
+
+
+
+Training edgevitv2 on NIH at 1741045556.2406049
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 50.97
+Accuracy on validation set: 55.11%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 53.06
+Accuracy on validation set: 57.11%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 56.36
+Accuracy on validation set: 57.11%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 58.25
+Accuracy on validation set: 59.11%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 59.94
+Accuracy on validation set: 56.67%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 59.28
+Accuracy on validation set: 54.44%
+
+
+Accuracy on test set: 58.00
+
+
+

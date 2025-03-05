@@ -1,0 +1,42 @@
+Training cvt on Private_CXR at 1740694035.0854528
+-----------------------------------------------
+
+
+Training cvt on Private_CXR at 1740694150.4209716
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 54.54
+Accuracy on validation set: 57.83%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 66.90
+Accuracy on validation set: 69.33%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 75.21
+Accuracy on validation set: 79.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 81.06
+Accuracy on validation set: 84.83%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 82.46
+Accuracy on validation set: 86.33%
+
+
+Accuracy on test set: 86.33
+
+
+

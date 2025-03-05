@@ -1,0 +1,60 @@
+Training invo_sparse_net on Private_CXR at 1740692142.9755147
+-----------------------------------------------
+
+
+Training invo_sparse_net on Private_CXR at 1740692262.31235
+-----------------------------------------------
+
+
+Training invo_sparse_net on Private_CXR at 1740692415.0086305
+-----------------------------------------------
+
+
+Training invo_sparse_net on Private_CXR at 1740692454.474381
+-----------------------------------------------
+
+
+Training invo_sparse_net on Private_CXR at 1740701974.8403003
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Training invo_sparse_net on Private_CXR at 1740726873.2108035
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 76.15
+Accuracy on validation set: 83.17%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.17
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 91.90
+Accuracy on validation set: 96.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 91.75
+Accuracy on validation set: 94.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 95.60
+Accuracy on validation set: 96.83%
+
+
+Accuracy on test set: 97.00
+
+
+

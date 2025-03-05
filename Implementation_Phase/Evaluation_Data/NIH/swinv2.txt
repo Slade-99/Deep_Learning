@@ -1,0 +1,44 @@
+Training swinv2 on NIH at 1741052351.347866
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 46.08
+Accuracy on validation set: 50.44%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 49.81
+Accuracy on validation set: 52.00%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 51.00
+Accuracy on validation set: 51.78%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 53.78
+Accuracy on validation set: 56.00%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 54.36
+Accuracy on validation set: 56.44%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 55.72
+Accuracy on validation set: 57.11%
+
+
+Accuracy on test set: 59.56
+
+
+
