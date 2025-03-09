@@ -1,0 +1,41 @@
+Training efficientnet_plots on Private_CXR at 1741342728.6826687
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 44.04
+Accuracy on validation set: 46.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 50.02
+Accuracy on validation set: 53.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 66.56
+Accuracy on validation set: 71.00%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 79.85
+Accuracy on validation set: 84.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 87.31
+Accuracy on validation set: 91.83%
+
+
+Accuracy on test set: 94.33
+
+
+
+Training Losses: [1.9316667014360427, 1.7560145421822866, 1.6964660080273946, 1.5996332677205403, 1.5058748902877173, 1.418671608567238, 1.3731834487120311, 1.3367220298449198, 1.320371780792872, 1.288048534989357, 1.2634231867392858, 1.2444120810429256, 1.2293795289595921, 1.2107181894779204, 1.209589355190595, 1.151834180355072, 1.1564519447088242, 1.1500033271312713, 1.1058431865771612, 1.10796299636364, 1.0867673138777414, 1.08372011979421, 1.0384420911471048, 1.0275942267974219, 0.9951592306296031, 0.9606169452269872, 0.9358207270503044, 0.9148361267646153, 0.8913970176378886, 0.8812128541866938, 0.8357166114449501, 0.8112525695562363, 0.7928041577339172, 0.7609008050958316, 0.7444028566281001, 0.7044257780909539, 0.6701647986968359, 0.6741752855976423, 0.6305055063962937, 0.6294809942444165, 0.6044998822112878, 0.5928326790034771, 0.559488826567928, 0.544077740708987, 0.5547382545967897, 0.5128617539256811, 0.49576871377726395, 0.5120804556210836, 0.4691226325308283, 0.4713603751609723]
+Training Accuracies: [tensor(33.5833, device='cuda:0'), tensor(35.5000, device='cuda:0'), tensor(34.8542, device='cuda:0'), tensor(37.7500, device='cuda:0'), tensor(39.2292, device='cuda:0'), tensor(43.1667, device='cuda:0'), tensor(41.5417, device='cuda:0'), tensor(43.2708, device='cuda:0'), tensor(44.5833, device='cuda:0'), tensor(44.0417, device='cuda:0'), tensor(44.2708, device='cuda:0'), tensor(44.7083, device='cuda:0'), tensor(46.6875, device='cuda:0'), tensor(47.1875, device='cuda:0'), tensor(47.6042, device='cuda:0'), tensor(47.5417, device='cuda:0'), tensor(51.6042, device='cuda:0'), tensor(51.5000, device='cuda:0'), tensor(50., device='cuda:0'), tensor(50.0208, device='cuda:0'), tensor(55.0417, device='cuda:0'), tensor(55.2292, device='cuda:0'), tensor(56.9792, device='cuda:0'), tensor(57.0417, device='cuda:0'), tensor(57.5833, device='cuda:0'), tensor(60.3333, device='cuda:0'), tensor(63.8125, device='cuda:0'), tensor(63.0417, device='cuda:0'), tensor(64.3333, device='cuda:0'), tensor(66.5625, device='cuda:0'), tensor(68.9792, device='cuda:0'), tensor(71.7708, device='cuda:0'), tensor(70.6458, device='cuda:0'), tensor(74.0417, device='cuda:0'), tensor(76.8333, device='cuda:0'), tensor(74.4167, device='cuda:0'), tensor(78.1250, device='cuda:0'), tensor(78.9792, device='cuda:0'), tensor(77.8958, device='cuda:0'), tensor(79.8542, device='cuda:0'), tensor(82.1458, device='cuda:0'), tensor(81.9792, device='cuda:0'), tensor(85.1458, device='cuda:0'), tensor(83.7083, device='cuda:0'), tensor(85.5833, device='cuda:0'), tensor(84.1458, device='cuda:0'), tensor(84.3125, device='cuda:0'), tensor(88., device='cuda:0'), tensor(87.2708, device='cuda:0'), tensor(87.3125, device='cuda:0')]
+Validation Accuracies: [tensor(33.3333, device='cuda:0'), tensor(33.3333, device='cuda:0'), tensor(33.3333, device='cuda:0'), tensor(34.6667, device='cuda:0'), tensor(42., device='cuda:0'), tensor(37.3333, device='cuda:0'), tensor(38., device='cuda:0'), tensor(44.8333, device='cuda:0'), tensor(42.3333, device='cuda:0'), tensor(46., device='cuda:0'), tensor(46.5000, device='cuda:0'), tensor(45.8333, device='cuda:0'), tensor(46.3333, device='cuda:0'), tensor(48., device='cuda:0'), tensor(47.6667, device='cuda:0'), tensor(48.3333, device='cuda:0'), tensor(51.3333, device='cuda:0'), tensor(54.5000, device='cuda:0'), tensor(51., device='cuda:0'), tensor(53.5000, device='cuda:0'), tensor(59.0000, device='cuda:0'), tensor(62.5000, device='cuda:0'), tensor(62.3333, device='cuda:0'), tensor(56.6667, device='cuda:0'), tensor(61.8333, device='cuda:0'), tensor(61.1667, device='cuda:0'), tensor(67.6667, device='cuda:0'), tensor(67.3333, device='cuda:0'), tensor(70.5000, device='cuda:0'), tensor(71., device='cuda:0'), tensor(72.8333, device='cuda:0'), tensor(75.6667, device='cuda:0'), tensor(73.8333, device='cuda:0'), tensor(80.3333, device='cuda:0'), tensor(80.8333, device='cuda:0'), tensor(84., device='cuda:0'), tensor(83.5000, device='cuda:0'), tensor(84.6667, device='cuda:0'), tensor(81.3333, device='cuda:0'), tensor(84.3333, device='cuda:0'), tensor(86., device='cuda:0'), tensor(88., device='cuda:0'), tensor(90.1667, device='cuda:0'), tensor(87., device='cuda:0'), tensor(89.8333, device='cuda:0'), tensor(87., device='cuda:0'), tensor(90.5000, device='cuda:0'), tensor(92.6667, device='cuda:0'), tensor(92.5000, device='cuda:0'), tensor(91.8333, device='cuda:0')]

@@ -1,0 +1,38 @@
+Training invo_sparse_net_l on Private_CXR at 1741165137.806508
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 61.60
+Accuracy on validation set: 67.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 81.48
+Accuracy on validation set: 84.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 85.42
+Accuracy on validation set: 92.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 89.12
+Accuracy on validation set: 93.50%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 91.19
+Accuracy on validation set: 91.50%
+
+
+Accuracy on test set: 94.33
+
+
+

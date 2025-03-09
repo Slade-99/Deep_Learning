@@ -29,8 +29,8 @@ import torch.nn.functional as F
 from thop import profile
 
 
-load = False
-model_name = "invosparsenet"
+load = True
+model_name = "invosparseneth"
 dataset = "NIH"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 log_file = '/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/'
@@ -91,19 +91,19 @@ def load_checkpoint(checkpoint,optimizer):
   print("=>Loading Checkpoint")
   model.load_state_dict(checkpoint['state_dict'])
   #optimizer.load_state_dict(checkpoint['optimizer'])
-model.eval()
+
 if load:
     model_path = '/mnt/hdd/Trained_Weights/NIH/invo_sparse_net/invo_sparse_net_1741048105.95246.pth.tar'
     checkpoint = torch.load(model_path)
     load_checkpoint(checkpoint,optimizer)
 
-
-
+all_labels = []
+all_preds = []
+all_probs = []
+model.eval()
 
 def eval_data(log_file_path,model,test_loader,data_transforms):
-    all_labels = []
-    all_preds = []
-    all_probs = []
+
 
     model.eval()
     with torch.no_grad():
@@ -169,9 +169,9 @@ def eval_data(log_file_path,model,test_loader,data_transforms):
         f.write(f"GFLOPs: {gflops:.2f} GFLOPs\n")
         f.write(f"  - Latency: {latency:.4f} s\n\n\n\n")
     
-    return all_labels,all_preds,all_probs
-
-all_labels,all_preds,all_probs = eval_data(log_file_path,model,test_loader,data_transforms)
+    
+    print(all_preds)
+eval_data(log_file_path,model,test_loader,data_transforms)
 
 cm = confusion_matrix(all_labels, all_preds)
 plt.figure(figsize=(10, 7))

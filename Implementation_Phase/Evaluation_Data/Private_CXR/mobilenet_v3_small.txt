@@ -44,3 +44,79 @@ Accuracy on test set: 86.17
 
 
 
+Training mobilenet_v3_small on Private_CXR at 1741318204.8974867
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 59.00
+Accuracy on validation set: 57.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 67.06
+Accuracy on validation set: 70.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 73.10
+Accuracy on validation set: 80.83%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 76.69
+Accuracy on validation set: 81.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 80.38
+Accuracy on validation set: 81.67%
+
+
+Accuracy on test set: 84.50
+
+
+
+Training mobilenet_v3_small on Private_CXR at 1741322292.47977
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 64.67
+Accuracy on validation set: 65.67%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 76.94
+Accuracy on validation set: 82.33%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 76.85
+Accuracy on validation set: 77.50%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 84.56
+Accuracy on validation set: 86.33%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 88.21
+Accuracy on validation set: 90.00%
+
+
+Accuracy on test set: 90.67
+
+
+

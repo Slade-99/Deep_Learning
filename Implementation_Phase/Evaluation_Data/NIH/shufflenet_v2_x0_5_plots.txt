@@ -1,0 +1,39 @@
+Training shufflenet_v2_x0_5_plots on NIH at 1741359941.3367589
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 41.30
+Accuracy on validation set: 46.73%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 47.01
+Accuracy on validation set: 49.07%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 47.33
+Accuracy on validation set: 50.70%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 50.40
+Accuracy on validation set: 52.10%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 51.14
+Accuracy on validation set: 50.70%
+
+
+Accuracy on test set: 47.04
+
+
+
+Training Losses: [1.101884549856186, 1.099182903766632, 1.097459249604832, 1.096592413295399, 1.0947601004080338, 1.0949154886332426, 1.0919689639048142, 1.0850963858040896, 1.0807871796868065, 1.0702003232457422, 1.0669310382821344, 1.0617241073738446, 1.0606752246618272, 1.0523076238957318, 1.0530935431068593, 1.0483710513873534, 1.046688681028106, 1.0445282323793932, 1.0426546760580757, 1.0381202215498144, 1.0443035423755647, 1.0445457967844876, 1.0384000252593648, 1.0337407301772725, 1.0375755721872504, 1.0346348063512283, 1.0283007134090771, 1.0261850609020753, 1.0323181732134386, 1.0280538315122778, 1.0284992824901233, 1.0189270515333522, 1.031630024855787, 1.016819661042907, 1.03275262307037, 1.017315066944469, 1.019440543922511, 1.0145781546831132, 1.0160993735898625, 1.0061570191925222, 1.0104151173071427, 1.0110355723987927, 1.0122607561674986, 1.0139282237399707, 1.010093846375292, 1.0133250228383324, 1.0024777190251783, 1.0074579339135776, 1.009567279978232, 1.002847620844841]Training Accuracies: [tensor(34.2435, device='cuda:0'), tensor(33.9022, device='cuda:0'), tensor(35.9499, device='cuda:0'), tensor(35.7509, device='cuda:0'), tensor(36.2628, device='cuda:0'), tensor(36.0068, device='cuda:0'), tensor(37.8271, device='cuda:0'), tensor(40.2162, device='cuda:0'), tensor(40.5574, device='cuda:0'), tensor(41.2969, device='cuda:0'), tensor(43.6576, device='cuda:0'), tensor(45.3072, device='cuda:0'), tensor(44.2264, device='cuda:0'), tensor(44.3686, device='cuda:0'), tensor(46.8714, device='cuda:0'), tensor(45.8476, device='cuda:0'), tensor(44.4539, device='cuda:0'), tensor(47.4403, device='cuda:0'), tensor(45.9898, device='cuda:0'), tensor(47.0136, device='cuda:0'), tensor(48.1229, device='cuda:0'), tensor(48.1797, device='cuda:0'), tensor(47.6394, device='cuda:0'), tensor(45.5347, device='cuda:0'), tensor(47.1274, device='cuda:0'), tensor(48.2082, device='cuda:0'), tensor(47.7816, device='cuda:0'), tensor(48.7486, device='cuda:0'), tensor(48.2366, device='cuda:0'), tensor(47.3265, device='cuda:0'), tensor(47.2412, device='cuda:0'), tensor(47.4972, device='cuda:0'), tensor(49.4027, device='cuda:0'), tensor(49.4312, device='cuda:0'), tensor(48.7770, device='cuda:0'), tensor(49.1183, device='cuda:0'), tensor(49.6871, device='cuda:0'), tensor(49.2890, device='cuda:0'), tensor(48.7201, device='cuda:0'), tensor(50.3982, device='cuda:0'), tensor(50.0569, device='cuda:0'), tensor(50.3697, device='cuda:0'), tensor(49.4027, device='cuda:0'), tensor(49.8009, device='cuda:0'), tensor(49.8009, device='cuda:0'), tensor(49.7440, device='cuda:0'), tensor(49.9431, device='cuda:0'), tensor(50.5973, device='cuda:0'), tensor(50.3697, device='cuda:0'), tensor(51.1377, device='cuda:0')]Validation Accuracies: [tensor(32.2430, device='cuda:0'), tensor(31.7757, device='cuda:0'), tensor(35.5140, device='cuda:0'), tensor(40.1869, device='cuda:0'), tensor(36.9159, device='cuda:0'), tensor(40.1869, device='cuda:0'), tensor(42.2897, device='cuda:0'), tensor(46.2617, device='cuda:0'), tensor(46.7290, device='cuda:0'), tensor(46.7290, device='cuda:0'), tensor(48.8318, device='cuda:0'), tensor(47.1963, device='cuda:0'), tensor(48.3645, device='cuda:0'), tensor(48.3645, device='cuda:0'), tensor(47.8972, device='cuda:0'), tensor(47.4299, device='cuda:0'), tensor(48.1308, device='cuda:0'), tensor(44.8598, device='cuda:0'), tensor(46.7290, device='cuda:0'), tensor(49.0654, device='cuda:0'), tensor(48.5981, device='cuda:0'), tensor(48.3645, device='cuda:0'), tensor(48.8318, device='cuda:0'), tensor(48.3645, device='cuda:0'), tensor(48.1308, device='cuda:0'), tensor(47.6635, device='cuda:0'), tensor(49.2991, device='cuda:0'), tensor(51.1682, device='cuda:0'), tensor(51.1682, device='cuda:0'), tensor(50.7009, device='cuda:0'), tensor(47.4299, device='cuda:0'), tensor(46.2617, device='cuda:0'), tensor(49.5327, device='cuda:0'), tensor(48.1308, device='cuda:0'), tensor(50.0000, device='cuda:0'), tensor(50.9346, device='cuda:0'), tensor(52.3364, device='cuda:0'), tensor(54.4393, device='cuda:0'), tensor(49.5327, device='cuda:0'), tensor(52.1028, device='cuda:0'), tensor(48.5981, device='cuda:0'), tensor(51.8692, device='cuda:0'), tensor(52.3364, device='cuda:0'), tensor(50.4673, device='cuda:0'), tensor(50.4673, device='cuda:0'), tensor(51.1682, device='cuda:0'), tensor(52.3364, device='cuda:0'), tensor(53.0374, device='cuda:0'), tensor(49.5327, device='cuda:0'), tensor(50.7009, device='cuda:0')]

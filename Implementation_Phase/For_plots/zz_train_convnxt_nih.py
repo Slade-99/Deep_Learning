@@ -28,8 +28,8 @@ current_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dataset_list = ["Private_CXR","Retinal_OCT","Skin_Cancer_ISIC","Br34H","PC"]
 models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"squeezeNet1_0":squeezenet1_0}
-dataset = "Private_CXR"
-selected_model = "mobilenet_v3_small"
+dataset = "NIH"
+selected_model = "convnxt_plots"
 #model = models_list[selected_model]
 params_count = 0
 log_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/"+dataset+"/"+selected_model+".txt"
@@ -138,8 +138,9 @@ model = edgevit.to(device)
 """
 
 
-model = mobilenet_v3_small(num_classes=3)
-model.features[0][0] = nn.Conv2d(1, 16, kernel_size=3, stride=2, padding=1, bias=False)
+
+model = convnext_tiny(num_classes=3)
+model.features[0][0] = nn.Conv2d(1, 96, kernel_size=3, stride=2, padding=1, bias=False)
 model = model.to(device)
 #summary(model, input_size =(1,224,224))
 criterion = nn.CrossEntropyLoss()
@@ -197,7 +198,7 @@ def train(model):
     for epoch in range(1, num_epochs + 1):
         epoch_losses = [] # List for losses in current epoch
         
-        for batch_idx, (data, targets) in enumerate(tqdm(train_loader)):
+        for batch_idx, (data, targets) in enumerate(train_loader):
             # Get data to cuda if possible
             data = data.to(device=device)
             targets = targets.to(device=device)
@@ -241,9 +242,9 @@ def train(model):
     log_file.write("\n\n\n\n")
 
     # Print the stored lists
-    print("Training Losses:", train_losses)
-    print("Training Accuracies:", train_accuracies)
-    print("Validation Accuracies:", val_accuracies)
+    log_file.write(f"Training Losses: {train_losses}")
+    log_file.write(f"Training Accuracies: {train_accuracies}")
+    log_file.write(f"Validation Accuracies: {val_accuracies}")
 
     log_file.close()
 

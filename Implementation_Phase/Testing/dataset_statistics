@@ -1,0 +1,50 @@
+import os
+import cv2
+import numpy as np
+from scipy import stats
+
+def image_statistics(folder_path, num_images=100):
+    """
+    Calculates statistics of pixel intensity values for a sample of images in a folder.
+
+    Args:
+        folder_path (str): Path to the folder containing images.
+        num_images (int): Number of images to sample (default: 100).
+
+    Returns:
+        pandas.DataFrame: DataFrame containing the statistics for each image.
+    """
+
+    image_files = [f for f in os.listdir(folder_path) if f.endswith(('.jpg', '.jpeg', '.png'))]
+    if len(image_files) > num_images:
+        image_files = np.random.choice(image_files, num_images, replace=False)
+
+    all_intensities = []
+    for image_file in image_files:
+        image_path = os.path.join(folder_path, image_file)
+        img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)  # Read as grayscale
+        if img is None:
+            print(f"Warning: Could not read image {image_file}. Skipping.")
+            continue
+        all_intensities.extend(img.flatten())
+
+    # Calculate statistics
+    mean = np.mean(all_intensities)
+    std = np.std(all_intensities)
+    min_val = np.min(all_intensities)
+    max_val = np.max(all_intensities)
+    median = np.median(all_intensities)
+    q1, q3 = np.percentile(all_intensities, [25, 75])
+
+    print("Summary Statistics:")
+    print(f"Mean: {mean:.2f}")
+    print(f"Standard Deviation: {std:.2f}")
+    print(f"Minimum: {min_val}")
+    print(f"Maximum: {max_val}")
+    print(f"Median (Q2): {median}")
+    print(f"25th Percentile (Q1): {q1}")
+    print(f"75th Percentile (Q3): {q3}")
+
+# Example usage:
+folder_path = '/home/azwad/Works/eval_nih'  # Replace with the actual path
+image_statistics(folder_path)
