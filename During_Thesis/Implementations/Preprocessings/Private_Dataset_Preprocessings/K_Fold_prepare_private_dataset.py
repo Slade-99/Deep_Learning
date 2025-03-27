@@ -12,7 +12,7 @@ import os
 
 
 class_names = ['normal', 'pneumonia', 'abnormal' ]
-train_dir = '/home/azwad/Works/Deep_Learning/dataset/Private/unified/'
+train_dir = '/mnt/hdd/dataset_collections/Private/unified'
 
 
 
@@ -37,8 +37,8 @@ new_transforms = transforms.Compose([
     transforms.Grayscale(num_output_channels=1),
     CLAHETransform(),
     #MedianBlurTransform(),
-    #transforms.RandomRotation(degrees=30),
-    #transforms.ColorJitter(brightness=0.2, contrast=0.2),
+    transforms.RandomRotation(degrees=30),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2),
     transforms.Resize((224, 224)),
     transforms.ToTensor(), # Converts to tensor and scales to [0, 1]
 ])

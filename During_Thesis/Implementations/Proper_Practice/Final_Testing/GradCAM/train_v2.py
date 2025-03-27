@@ -9,15 +9,15 @@ import numpy as np
 import importlib
 import Implementations.Preprocessings.Private_Dataset_Preprocessings.K_Fold_prepare_private_dataset
 from Implementations.Preprocessings.Private_Dataset_Preprocessings.K_Fold_prepare_private_dataset_v2 import AugmentedDataset
-from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
+#from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
 #from Implementations.Proper_Practice.Final_Testing.Model.Swin.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.CVT.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model import model
-#from Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model import model
+from Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model import model
 import torch.nn.functional as F  
 from torch import optim
-from Implementations.Proper_Practice.Final_Testing.Utils.utils import save_checkpoint,load_checkpoint
+#from Implementations.Proper_Practice.Final_Testing.Utils.utils import save_checkpoint,load_checkpoint
 current_datetime = datetime.now()
 
 
@@ -28,8 +28,8 @@ in_channels = 1
 num_classes = 3
 learning_rate = 0.0001
 batch_size = 16
-num_epochs = 5
-num_rounds = 3
+num_epochs = 4
+num_rounds = 5
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 #optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
@@ -37,7 +37,7 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 
 ### Training Loop  ##
-log_file_path = "/home/azwad/Works/Deep_Learning/Implementations/architecture_weights/new_runs_description.txt"
+log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/GradCAM/runs_mobilevit.txt"
 description = "Implementation of LeViT on Benchmark dataset"
 name = "LeViT on Benchmark"
 
@@ -62,7 +62,10 @@ def kfold_cross_validation(k,  batch_size, model):
     kfold = KFold(n_splits=k, shuffle=True, random_state=42)
 
     results = []
-    accuracy = 0
+    accuracy_list = []
+    loss_list = []
+    epoch_list = []
+    epoch_values = 1
     for fold, (train_idx, val_idx) in enumerate(kfold.split(dataset)):
         print(f"Training Fold {fold+1}/{k}...")
 
@@ -85,6 +88,8 @@ def kfold_cross_validation(k,  batch_size, model):
             count = 0
             augmented_train_subset = AugmentedDataset(train_subset,'aug')
             train_loader = DataLoader(augmented_train_subset, batch_size=16, shuffle=True)
+            correct = 0
+            total = 0
             for images, labels in tqdm(train_loader):
                 images = images.to(device)
                 labels = labels.to(device)
@@ -94,15 +99,25 @@ def kfold_cross_validation(k,  batch_size, model):
                 loss.backward()
                 optimizer.step()
                 count+=1
-                
+                _, predicted = torch.max(outputs, 1)
+                total += labels.size(0)
+                correct += (predicted == labels).sum().item()
                 if count%400 == 0:
                     
                     time.sleep(20)
             
-            time.sleep(20)
+            epoch_list.append(epoch_values)
+            epoch_values+=1
+            
+            #time.sleep(20)
+            loss_list.append(loss)
 
-
+            accuracy = correct / total
+            accuracy_list.append(accuracy)
+            print(loss_list)
+            print(accuracy_list)
         # Validation Loop
+        """
         model.eval()
         correct = 0
         total = 0
@@ -118,16 +133,20 @@ def kfold_cross_validation(k,  batch_size, model):
         accuracy = correct / total
         results.append(accuracy)
         print(f"Fold {fold+1} Accuracy: {accuracy:.4f}")
+        """
 
-    print(f"Average Accuracy: {np.mean(results):.4f}")
-    checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
+    #print(f"Average Accuracy: {np.mean(results):.4f}")
+    #checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
     with open(log_file_path, 'a') as f:
       f.write("\n\n\n")
       f.write(f"Training completed at {current_datetime}\n")
       f.write("=================================\n")
-      f.write(f"{description}\n")
-      f.write(f"Accuracy obtained = {np.mean(results):.4f}\n")
-    save_checkpoint(checkpoint,name)
+      #f.write(f"{description}\n")
+      #f.write(f"Accuracy obtained = {np.mean(results):.4f}\n")
+      f.write(f"{epoch_list}\n")
+      f.write(f"{loss_list}\n")
+      f.write(f"{accuracy_list}\n")
+    #save_checkpoint(checkpoint,name)
     return results
 
 
