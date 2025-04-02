@@ -11,3 +11,29 @@ GFLOPs: 3.17 GFLOPs
 
 
 
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.6330
+  - F1 Score: 0.6211
+  - Precision: 0.6341
+  - Recall: 0.6330
+GFLOPs: 3.17 GFLOPs
+  - Latency: 0.0603 s
+
+
+
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.6330
+  - F1 Score: 0.6211
+  - Precision: 0.6341
+  - Recall: 0.6330
+GFLOPs: 3.17 GFLOPs
+  - Latency: 0.0275 s
+
+
+

@@ -23,3 +23,6 @@ class MobileViT(nn.Module):
         return logits
 
 model = MobileViT(3).to(device)
+#total_params = sum(p.numel() for p in model.parameters())
+#trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+#print(trainable_params)

@@ -17,3 +17,6 @@ model.classifier[1] = nn.Linear(model.classifier[1].in_features, 3)
 # Print the model architecture to verify changes
 #print(model)
 #summary(model, input_size =(1,224,224))
+#total_params = sum(p.numel() for p in model.parameters())
+#trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+#print(trainable_params)

@@ -1,0 +1,48 @@
+Training efficientnet_v2_s on NIH at 1741661168.1050038
+-----------------------------------------------
+
+
+Training efficientnet_v2_s on NIH at 1741665386.597799
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 34.64
+Accuracy on validation set: 32.24%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 35.81
+Accuracy on validation set: 33.18%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 37.23
+Accuracy on validation set: 41.36%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 38.23
+Accuracy on validation set: 35.75%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 40.61
+Accuracy on validation set: 47.43%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 45.02
+Accuracy on validation set: 47.66%
+
+
+Accuracy on test set: 45.07
+
+
+

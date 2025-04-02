@@ -1,0 +1,136 @@
+Training densenet_121_for_KD on NIH at 1741646365.03843
+-----------------------------------------------
+
+
+Training densenet_121_for_KD on NIH at 1741646450.3405495
+-----------------------------------------------
+
+
+Training densenet_121_for_KD on NIH at 1741646519.2998638
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 50.48
+Accuracy on validation set: 55.14%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 52.70
+Accuracy on validation set: 57.24%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 53.44
+Accuracy on validation set: 59.81%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 56.54
+Accuracy on validation set: 62.38%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 57.91
+Accuracy on validation set: 64.95%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 57.42
+Accuracy on validation set: 66.59%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 58.70
+Accuracy on validation set: 65.89%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 60.61
+Accuracy on validation set: 64.02%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 62.14
+Accuracy on validation set: 62.38%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 63.14
+Accuracy on validation set: 64.72%
+
+
+Results on epoch 110
+------------------------------
+Accuracy on training set: 63.37
+Accuracy on validation set: 66.59%
+
+
+Results on epoch 120
+------------------------------
+Accuracy on training set: 62.40
+Accuracy on validation set: 63.32%
+
+
+Results on epoch 130
+------------------------------
+Accuracy on training set: 64.87
+Accuracy on validation set: 65.19%
+
+
+Results on epoch 140
+------------------------------
+Accuracy on training set: 65.05
+Accuracy on validation set: 68.69%
+
+
+Results on epoch 150
+------------------------------
+Accuracy on training set: 65.93
+Accuracy on validation set: 64.95%
+
+
+Results on epoch 160
+------------------------------
+Accuracy on training set: 67.32
+Accuracy on validation set: 66.59%
+
+
+Results on epoch 170
+------------------------------
+Accuracy on training set: 66.98
+Accuracy on validation set: 69.63%
+
+
+Results on epoch 180
+------------------------------
+Accuracy on training set: 67.63
+Accuracy on validation set: 66.82%
+
+
+Results on epoch 190
+------------------------------
+Accuracy on training set: 69.28
+Accuracy on validation set: 66.82%
+
+
+Results on epoch 200
+------------------------------
+Accuracy on training set: 69.62
+Accuracy on validation set: 67.52%
+
+
+Accuracy on test set: 63.79
+
+
+

@@ -7,9 +7,8 @@ from PIL import Image
 import cv2
 
 # Paths and parameters
-train_dir = '/home/azwad/Works/Deep_Learning/dataset/Private/Test'
-num_clients = 10
-batch_size = 16
+train_dir = '/mnt/hdd/dataset_collections/Private/unified'
+batch_size = 64
 
 class CLAHETransform:
     def __call__(self, img):
@@ -36,6 +35,6 @@ test_data = dataset
 
 
 # Create DataLoader for testing data
-test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=False)
+test_dataloader = DataLoader(test_data, batch_size=batch_size, shuffle=True)
 
 

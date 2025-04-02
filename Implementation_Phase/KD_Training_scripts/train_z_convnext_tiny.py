@@ -28,7 +28,7 @@ current_time = time.time()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dataset_list = ["Private_CXR","Retinal_OCT","Skin_Cancer_ISIC","Br34H","PC"]
 models_list = {"invo_sparse_net":invo_sparse_net , "mobilenet_v3_small":mobilenet_v3_small, "convnext_tiny":convnext_tiny,"efficientnet_v2_s":efficientnet_v2_s,"shufflenet_v2_x0_5":shufflenet_v2_x0_5,"squeezeNet1_0":squeezenet1_0}
-dataset = "Private_CXR"
+dataset = "NIH"
 selected_model = "convnext_tiny"
 #model = models_list[selected_model]
 params_count = 0
@@ -43,9 +43,9 @@ log_file.write(f"-----------------------------------------------\n\n\n")
 #### Hyperparameters ####
 in_channels = 1
 num_classes = 3
-learning_rate = 0.00005
-batch_size = 16
-num_epochs = 50
+learning_rate = 0.00001
+batch_size = 8
+num_epochs = 60
 #########################
 
 
@@ -193,7 +193,7 @@ def check_accuracy(loader, model):
 
 teacher_model = densenet121(num_classes=3,)  
 teacher_model.features[0] = nn.Conv2d(1, teacher_model.features[0].out_channels, kernel_size=7, stride=2, padding=3, bias=False)
-checkpoint_path = "/mnt/hdd/Trained_Weights/Private_CXR/densenet121/densenet121_1740622689.5164115160.pth.tar"
+checkpoint_path = "/mnt/hdd/Trained_Weights/NIH/densenet_121_for_KD/densenet_121_for_KD_1741646519.2998638.pth.tar"
 checkpoint = torch.load(checkpoint_path, map_location=device)
 
 # Load teacher model weights
@@ -246,10 +246,10 @@ def train(model):
             loss.backward()
             optimizer.step()
 
-            if batch_idx % 10 == 0 and sleeping:
+            if batch_idx % 100 == 0 and sleeping:
                 time.sleep(10)
 
-        time.sleep(10)
+        time.sleep(15)
 
         if epoch % 10 == 0:
             log_file.write(f"Results on epoch {epoch}\n")

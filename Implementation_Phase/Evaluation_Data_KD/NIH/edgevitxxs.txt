@@ -1,0 +1,52 @@
+Training edgevitxxs on NIH at 1741660794.6525872
+-----------------------------------------------
+
+
+Training edgevitxxs on NIH at 1741661189.8237958
+-----------------------------------------------
+
+
+Training edgevitxxs on NIH at 1741664010.1609278
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 54.44
+Accuracy on validation set: 55.14%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 58.08
+Accuracy on validation set: 58.64%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 61.97
+Accuracy on validation set: 62.62%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 63.79
+Accuracy on validation set: 62.38%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 65.22
+Accuracy on validation set: 61.92%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 68.23
+Accuracy on validation set: 61.92%
+
+
+Accuracy on test set: 61.08
+
+
+

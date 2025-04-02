@@ -1,12 +1,13 @@
 ####### Evalutions #######
-from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
+#from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
 #from Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model import model
-#rom Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model import model
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model_gradcam import model
+from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
 #from Implementations.Proper_Practice.Final_Testing.Model.Swin.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.CVT.model import model
-from Implementations.Preprocessings.Private_Dataset_Preprocessings.Testing_prepare_private_dataset import test_dataloader ,eval_transforms
-from Implementations.Proper_Practice.Final_Testing.Utils.utils import save_checkpoint,load_checkpoint
+from During_Thesis.Implementations.Preprocessings.Private_Dataset_Preprocessings.Testing_prepare_private_dataset import test_dataloader ,eval_transforms
+#from Implementations.Proper_Practice.Final_Testing.Utils.utils import save_checkpoint,load_checkpoint
 import torch
 from torchsummary import summary
 
@@ -22,10 +23,10 @@ from torch import optim
 from torchvision.transforms.functional import to_pil_image
 import matplotlib.pyplot as plt
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-log_file_path = "/home/azwad/Works/Deep_Learning/Implementations/architecture_weights/testing_metric.txt"
-description = "Custom Architecture after Federated Averaging"
-model_path = '/home/azwad/Works/Deep_Learning/Implementations/architecture_weights/Custom_Architecture on Private.pth.tar'
-class_names = ['normal', 'pneumonia', 'abnormal' ]
+log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/Results_Data/MobileNet_V2_S/testing_metric.txt"
+description = "MobileViT_S"
+model_path = '/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Model_Weights/MobileNet_V2.pth.tar'
+class_names = ['normal', 'abnormal' , 'pneumonia' ]
 
 
 
@@ -97,12 +98,22 @@ with open(log_file_path, 'a') as f:
     f.write(f"  - Latency: {latency:.4f} s\n\n\n\n")
 cm = confusion_matrix(all_labels, all_preds)
 plt.figure(figsize=(10, 7))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
-plt.xlabel('Predicted')
-plt.ylabel('True')
-plt.title('Confusion Matrix')
+sns.heatmap(
+    cm, 
+    annot=True, 
+    fmt='d', 
+    cmap='Blues', 
+    xticklabels=class_names, 
+    yticklabels=class_names, 
+    annot_kws={"size": 14, "fontweight": "bold"}  # Increase annotation font size and make it bold
+)
+plt.xlabel('Predicted', fontsize=14, fontweight="bold")
+plt.ylabel('True', fontsize=14, fontweight="bold")
+#plt.title('Confusion Matrix')
+plt.xticks(fontsize=14, fontweight="bold", rotation=0)
+plt.yticks(fontsize=14, fontweight="bold", rotation=90)
 plt.show()
-plt.savefig('confusion_matrix_LeViT.png')
+#plt.savefig('confusion_matrix_LeViT.png')
 
 
 
@@ -124,10 +135,12 @@ for i in range(len(np.unique(all_labels))):
 #plt.plot([0, 1], [0, 1], 'k--', label="Random Classifier")
 
 # Add labels and title
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('ROC Curve for Multi-Class Classification')
-plt.legend(loc='lower right')
+plt.xlabel('False Positive Rate', fontsize=14, fontweight="bold")
+plt.ylabel('True Positive Rate', fontsize=14, fontweight="bold")
+plt.xticks(fontsize=14, fontweight="bold")
+plt.yticks(fontsize=14, fontweight="bold")
+#plt.title('ROC Curve for Multi-Class Classification')
+plt.legend(loc='lower right', prop={'size': 14, 'weight': 'bold'})
 
 # Show the plot
 plt.show()

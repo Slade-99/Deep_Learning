@@ -44,7 +44,7 @@ log_file.write(f"-----------------------------------------------\n\n\n")
 in_channels = 1
 num_classes = 3
 learning_rate = 0.00005
-batch_size = 16
+batch_size = 8
 num_epochs = 50
 #########################
 
@@ -214,6 +214,8 @@ def train(model):
 
             # gradient descent or adam step
             optimizer.step()
+            if(batch_idx%100==0):
+                time.sleep(15)
         
         # Calculate average epoch loss
         avg_epoch_loss = sum(epoch_losses) / len(epoch_losses)

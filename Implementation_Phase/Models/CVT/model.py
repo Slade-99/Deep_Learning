@@ -11,7 +11,7 @@ class CvT(nn.Module):
         # Load the CvT model configuration
         configuration = CvtConfig(num_channels=1 , num_labels = 3)
         self.CvT = CvtModel(configuration)
-        self.classifier = nn.Linear(384, 11)
+        self.classifier = nn.Linear(384, 3)
 
 
     def forward(self, x):

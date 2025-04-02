@@ -25,3 +25,6 @@ class SWIN(nn.Module):
 
 model = SWIN().to(device)
 #summary(model, input_size =(1,224,224))
+#total_params = sum(p.numel() for p in model.parameters())
+#trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+#print(trainable_params)

@@ -102,9 +102,17 @@ features_2d = tsne.fit_transform(features_np)
 
 # ====== Plot t-SNE ======
 plt.figure(figsize=(8, 6))
-scatter = plt.scatter(features_2d[:, 0], features_2d[:, 1], c=labels_np, cmap="viridis", alpha=0.7)
-plt.colorbar(label="Class Labels")
-plt.title("2D t-SNE Analysis of Model Feature Representations")
-plt.xlabel("t-SNE Component 1")
-plt.ylabel("t-SNE Component 2")
+scatter = plt.scatter(features_2d[:, 0], features_2d[:, 1], c=labels_np, cmap="viridis", alpha=1)
+
+# Increase font size and boldness
+plt.colorbar(label="Class Labels").ax.set_ylabel("Class Labels", fontsize=14, fontweight="bold")
+
+#plt.title("2D t-SNE Analysis of Model Feature Representations", fontsize=16, fontweight="bold")
+plt.xlabel("t-SNE Component 1", fontsize=14, fontweight="bold")
+plt.ylabel("t-SNE Component 2", fontsize=14, fontweight="bold")
+
+# Increase tick label sizes
+plt.xticks(fontsize=12, fontweight="bold")
+plt.yticks(fontsize=12, fontweight="bold")
+
 plt.show()

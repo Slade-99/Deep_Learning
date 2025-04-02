@@ -30,7 +30,7 @@ from thop import profile
 
 
 load = True
-model_name = "invosparseneth"
+model_name = "invosparsenet"
 dataset = "NIH"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 log_file = '/home/azwad/Works/Deep_Learning/Implementation_Phase/Evaluation_Data/'
@@ -93,7 +93,8 @@ def load_checkpoint(checkpoint,optimizer):
   #optimizer.load_state_dict(checkpoint['optimizer'])
 
 if load:
-    model_path = '/mnt/hdd/Trained_Weights/NIH/invo_sparse_net/invo_sparse_net_1741048105.95246.pth.tar'
+    #model_path = '/mnt/hdd/Trained_Weights/Private_CXR/invo_sparse_net_m/invo_sparse_net_m_1741313999.0115225.pth.tar'
+    model_path = '/mnt/hdd/Trained_Weights/NIH/invsnet_plot/invsnet_plot_1741355826.5432467.pth.tar'
     checkpoint = torch.load(model_path)
     load_checkpoint(checkpoint,optimizer)
 
@@ -175,10 +176,25 @@ eval_data(log_file_path,model,test_loader,data_transforms)
 
 cm = confusion_matrix(all_labels, all_preds)
 plt.figure(figsize=(10, 7))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
-plt.xlabel('Predicted')
-plt.ylabel('True')
-plt.title('Confusion Matrix')
+sns.heatmap(
+    cm, 
+    annot=True, 
+    fmt='d', 
+    cmap='Blues', 
+    xticklabels=class_names, 
+    yticklabels=class_names, 
+    annot_kws={"size": 14, "fontweight": "bold"}  # Increase annotation font size and make it bold
+)
+
+# Set axis labels and title
+plt.xlabel('Predicted', fontsize=14, fontweight="bold")
+plt.ylabel('True', fontsize=14, fontweight="bold")
+#plt.title('Confusion Matrix', fontsize=18, fontweight="bold")
+
+# Increase tick label size and boldness
+plt.xticks(fontsize=14, fontweight="bold", rotation=0)
+plt.yticks(fontsize=14, fontweight="bold", rotation=90)
+
 plt.show()
 cm_path = log_file+dataset+"/"+model_name+"_confusion_matrix.png"
 #plt.savefig(cm_path)
@@ -212,14 +228,23 @@ for i in range(len(class_names)):
 #plt.plot([0, 1], [0, 1], 'k--', label="Random Classifier")
 
 # Add labels and title to the plot
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('ROC Curve for Multi-Class Classification')
-plt.legend(loc='lower right')
+plt.xlabel('False Positive Rate', fontsize=14, fontweight="bold")
+plt.ylabel('True Positive Rate', fontsize=14, fontweight="bold")
+
+# Set title with increased font size and bold font
+#plt.title('ROC Curve for Multi-Class Classification', fontsize=14, fontweight="bold")
+
+# Set legend with increased font size
+
+plt.legend(loc='lower right', prop={'size': 14, 'weight': 'bold'})
+
+# Increase tick label size and boldness
+plt.xticks(fontsize=14, fontweight="bold")
+plt.yticks(fontsize=14, fontweight="bold")
 
 # Save the plot to a file
 roc_path = "roc_curve.png"
-#plt.savefig(roc_path)
+# plt.savefig(roc_path)
 
 # Show the plot
 plt.show()

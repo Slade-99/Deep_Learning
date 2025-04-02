@@ -536,4 +536,83 @@ Accuracy on test set: 63.30
 
 
 
-Training Losses: [1.1251836527477612, 1.0691822837699543, 1.03179560222409, 1.025511223077774, 0.9959268223155628, 0.9892270705916665, 0.9726886952465231, 0.9548612746325407, 0.9552432631904428, 0.9275932626290755, 0.9181040538982912, 0.9219849296591499, 0.9175068278204311, 0.9012700701301748, 0.8971211834387346, 0.8945297858931801, 0.8846580457958308, 0.8778440204533664, 0.860150213133205, 0.8753982004794207, 0.8489292226054451, 0.8659689047119834, 0.8496491566300393, 0.8480779028751634, 0.85221724672751, 0.8388620484958995, 0.838538907603784, 0.8208349325440146, 0.8171360908584161, 0.8114891529083252, 0.8172975504940206, 0.814696983451193, 0.805364320630377, 0.8046091869473457, 0.7929185631600293, 0.7949058352546259, 0.7926110928708857, 0.7828896546905691, 0.7757081048055129, 0.7691375889561393, 0.7760069196874445, 0.7711806921796365, 0.7648406026038257, 0.7633594859730114, 0.7432124815203927, 0.7470425676215778, 0.7449795648455619, 0.7500981838865713, 0.7349689816886729, 0.7262813412330368]Training Accuracies: [tensor(41.9511, device='cuda:0'), tensor(49.0899, device='cuda:0'), tensor(43.9704, device='cuda:0'), tensor(44.4824, device='cuda:0'), tensor(52.6735, device='cuda:0'), tensor(55.2332, device='cuda:0'), tensor(55.6030, device='cuda:0'), tensor(50.3413, device='cuda:0'), tensor(56.0296, device='cuda:0'), tensor(53.6121, device='cuda:0'), tensor(55.0910, device='cuda:0'), tensor(58.2480, device='cuda:0'), tensor(58.3333, device='cuda:0'), tensor(58.9022, device='cuda:0'), tensor(56.3709, device='cuda:0'), tensor(60.3811, device='cuda:0'), tensor(60.3527, device='cuda:0'), tensor(60.0398, device='cuda:0'), tensor(56.3424, device='cuda:0'), tensor(62.6849, device='cuda:0'), tensor(62.3436, device='cuda:0'), tensor(62.7702, device='cuda:0'), tensor(62.3151, device='cuda:0'), tensor(62.8840, device='cuda:0'), tensor(62.8840, device='cuda:0'), tensor(59.2719, device='cuda:0'), tensor(62.6280, device='cuda:0'), tensor(63.2821, device='cuda:0'), tensor(63.6234, device='cuda:0'), tensor(65.5290, device='cuda:0'), tensor(63.5381, device='cuda:0'), tensor(62.5427, device='cuda:0'), tensor(67.3493, device='cuda:0'), tensor(67.0648, device='cuda:0'), tensor(66.9795, device='cuda:0'), tensor(65.3868, device='cuda:0'), tensor(67.6621, device='cuda:0'), tensor(66.2969, device='cuda:0'), tensor(68.5438, device='cuda:0'), tensor(66.6382, device='cuda:0'), tensor(67.3493, device='cuda:0'), tensor(66.7520, device='cuda:0'), tensor(62.8555, device='cuda:0'), tensor(68.8282, device='cuda:0'), tensor(68.1456, device='cuda:0'), tensor(65.9556, device='cuda:0'), tensor(68.4016, device='cuda:0'), tensor(69.8521, device='cuda:0'), tensor(68.9420, device='cuda:0'), tensor(69.3117, device='cuda:0')]Validation Accuracies: [tensor(51.1682, device='cuda:0'), tensor(50.4673, device='cuda:0'), tensor(46.7290, device='cuda:0'), tensor(46.0280, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(54.6729, device='cuda:0'), tensor(54.2056, device='cuda:0'), tensor(46.9626, device='cuda:0'), tensor(54.9065, device='cuda:0'), tensor(54.2056, device='cuda:0'), tensor(56.5421, device='cuda:0'), tensor(54.4393, device='cuda:0'), tensor(53.5047, device='cuda:0'), tensor(56.5421, device='cuda:0'), tensor(52.8037, device='cuda:0'), tensor(59.5794, device='cuda:0'), tensor(57.2430, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(55.6075, device='cuda:0'), tensor(59.1121, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(57.9439, device='cuda:0'), tensor(55.3738, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(57.2430, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(60.5140, device='cuda:0'), tensor(56.7757, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(61.2150, device='cuda:0'), tensor(57.9439, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(60.0467, device='cuda:0'), tensor(58.1776, device='cuda:0'), tensor(59.5794, device='cuda:0'), tensor(55.3738, device='cuda:0'), tensor(60.2804, device='cuda:0'), tensor(60.2804, device='cuda:0'), tensor(59.1121, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(60.0467, device='cuda:0'), tensor(60.9813, device='cuda:0'), tensor(61.2150, device='cuda:0')]
+Training Losses: [1.1251836527477612, 1.0691822837699543, 1.03179560222409, 1.025511223077774, 0.9959268223155628, 0.9892270705916665, 0.9726886952465231, 0.9548612746325407, 0.9552432631904428, 0.9275932626290755, 0.9181040538982912, 0.9219849296591499, 0.9175068278204311, 0.9012700701301748, 0.8971211834387346, 0.8945297858931801, 0.8846580457958308, 0.8778440204533664, 0.860150213133205, 0.8753982004794207, 0.8489292226054451, 0.8659689047119834, 0.8496491566300393, 0.8480779028751634, 0.85221724672751, 0.8388620484958995, 0.838538907603784, 0.8208349325440146, 0.8171360908584161, 0.8114891529083252, 0.8172975504940206, 0.814696983451193, 0.805364320630377, 0.8046091869473457, 0.7929185631600293, 0.7949058352546259, 0.7926110928708857, 0.7828896546905691, 0.7757081048055129, 0.7691375889561393, 0.7760069196874445, 0.7711806921796365, 0.7648406026038257, 0.7633594859730114, 0.7432124815203927, 0.7470425676215778, 0.7449795648455619, 0.7500981838865713, 0.7349689816886729, 0.7262813412330368]Training Accuracies: [tensor(41.9511, device='cuda:0'), tensor(49.0899, device='cuda:0'), tensor(43.9704, device='cuda:0'), tensor(44.4824, device='cuda:0'), tensor(52.6735, device='cuda:0'), tensor(55.2332, device='cuda:0'), tensor(55.6030, device='cuda:0'), tensor(50.3413, device='cuda:0'), tensor(56.0296, device='cuda:0'), tensor(53.6121, device='cuda:0'), tensor(55.0910, device='cuda:0'), tensor(58.2480, device='cuda:0'), tensor(58.3333, device='cuda:0'), tensor(58.9022, device='cuda:0'), tensor(56.3709, device='cuda:0'), tensor(60.3811, device='cuda:0'), tensor(60.3527, device='cuda:0'), tensor(60.0398, device='cuda:0'), tensor(56.3424, device='cuda:0'), tensor(62.6849, device='cuda:0'), tensor(62.3436, device='cuda:0'), tensor(62.7702, device='cuda:0'), tensor(62.3151, device='cuda:0'), tensor(62.8840, device='cuda:0'), tensor(62.8840, device='cuda:0'), tensor(59.2719, device='cuda:0'), tensor(62.6280, device='cuda:0'), tensor(63.2821, device='cuda:0'), tensor(63.6234, device='cuda:0'), tensor(65.5290, device='cuda:0'), tensor(63.5381, device='cuda:0'), tensor(62.5427, device='cuda:0'), tensor(67.3493, device='cuda:0'), tensor(67.0648, device='cuda:0'), tensor(66.9795, device='cuda:0'), tensor(65.3868, device='cuda:0'), tensor(67.6621, device='cuda:0'), tensor(66.2969, device='cuda:0'), tensor(68.5438, device='cuda:0'), tensor(66.6382, device='cuda:0'), tensor(67.3493, device='cuda:0'), tensor(66.7520, device='cuda:0'), tensor(62.8555, device='cuda:0'), tensor(68.8282, device='cuda:0'), tensor(68.1456, device='cuda:0'), tensor(65.9556, device='cuda:0'), tensor(68.4016, device='cuda:0'), tensor(69.8521, device='cuda:0'), tensor(68.9420, device='cuda:0'), tensor(69.3117, device='cuda:0')]Validation Accuracies: [tensor(51.1682, device='cuda:0'), tensor(50.4673, device='cuda:0'), tensor(46.7290, device='cuda:0'), tensor(46.0280, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(54.6729, device='cuda:0'), tensor(54.2056, device='cuda:0'), tensor(46.9626, device='cuda:0'), tensor(54.9065, device='cuda:0'), tensor(54.2056, device='cuda:0'), tensor(56.5421, device='cuda:0'), tensor(54.4393, device='cuda:0'), tensor(53.5047, device='cuda:0'), tensor(56.5421, device='cuda:0'), tensor(52.8037, device='cuda:0'), tensor(59.5794, device='cuda:0'), tensor(57.2430, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(55.6075, device='cuda:0'), tensor(59.1121, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(56.3084, device='cuda:0'), tensor(57.9439, device='cuda:0'), tensor(55.3738, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(57.2430, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(60.5140, device='cuda:0'), tensor(56.7757, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(61.2150, device='cuda:0'), tensor(57.9439, device='cuda:0'), tensor(59.8131, device='cuda:0'), tensor(58.8785, device='cuda:0'), tensor(60.7477, device='cuda:0'), tensor(60.0467, device='cuda:0'), tensor(58.1776, device='cuda:0'), tensor(59.5794, device='cuda:0'), tensor(55.3738, device='cuda:0'), tensor(60.2804, device='cuda:0'), tensor(60.2804, device='cuda:0'), tensor(59.1121, device='cuda:0'), tensor(57.7103, device='cuda:0'), tensor(60.0467, device='cuda:0'), tensor(60.9813, device='cuda:0'), tensor(61.2150, device='cuda:0')]Training mobilenet_v3_small on NIH at 1741783347.4211876
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 36.23
+Accuracy on validation set: 38.08%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 39.82
+Accuracy on validation set: 44.86%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 43.29
+Accuracy on validation set: 45.09%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 43.60
+Accuracy on validation set: 47.20%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 46.02
+Accuracy on validation set: 49.07%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 46.90
+Accuracy on validation set: 49.07%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 46.10
+Accuracy on validation set: 50.70%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 49.03
+Accuracy on validation set: 49.07%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 48.04
+Accuracy on validation set: 53.04%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 49.83
+Accuracy on validation set: 53.04%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 49.37
+Accuracy on validation set: 51.87%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 49.89
+Accuracy on validation set: 52.57%
+
+
+Accuracy on test set: 50.25
+
+
+

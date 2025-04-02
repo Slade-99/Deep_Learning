@@ -1,0 +1,48 @@
+Training mobilevitv2 on NIH at 1741660953.5088608
+-----------------------------------------------
+
+
+Training mobilevitv2 on NIH at 1741676085.2170014
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 58.33
+Accuracy on validation set: 60.28%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 62.86
+Accuracy on validation set: 66.36%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 63.79
+Accuracy on validation set: 66.59%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 66.72
+Accuracy on validation set: 66.59%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.68
+Accuracy on validation set: 67.99%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 71.30
+Accuracy on validation set: 68.69%
+
+
+Accuracy on test set: 66.75
+
+
+

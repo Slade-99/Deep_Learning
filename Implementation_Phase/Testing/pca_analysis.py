@@ -101,9 +101,12 @@ reduced_features = pca.fit_transform(features)
 
 # Visualize PCA result
 plt.figure(figsize=(10, 6))
-scatter = plt.scatter(reduced_features[:, 0], reduced_features[:, 1], c=labels, cmap='jet', alpha=0.5)
-plt.colorbar(scatter, label="Class Labels")
-plt.xlabel("Principal Component 1")
-plt.ylabel("Principal Component 2")
-plt.title("PCA Analysis of Model Feature Representations")
+scatter = plt.scatter(reduced_features[:, 0], reduced_features[:, 1], c=labels, cmap='jet', alpha=1)
+plt.colorbar(scatter, label="Class Labels").ax.set_ylabel("Class Labels", fontsize=14, fontweight="bold")
+plt.xlabel("Principal Component 1" , fontsize=14, fontweight="bold" )
+plt.ylabel("Principal Component 2" , fontsize=14, fontweight="bold")
+plt.xticks(fontsize=12, fontweight="bold")
+plt.yticks(fontsize=12, fontweight="bold")
+
+#plt.title("PCA Analysis of Model Feature Representations")
 plt.show()

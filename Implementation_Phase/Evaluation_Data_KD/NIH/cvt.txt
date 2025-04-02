@@ -1,0 +1,56 @@
+Training cvt on NIH at 1741660497.231335
+-----------------------------------------------
+
+
+Training cvt on NIH at 1741660690.7296283
+-----------------------------------------------
+
+
+Training cvt on NIH at 1741661138.5636816
+-----------------------------------------------
+
+
+Training cvt on NIH at 1741661421.0515485
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 49.49
+Accuracy on validation set: 50.23%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 52.90
+Accuracy on validation set: 53.74%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 54.27
+Accuracy on validation set: 57.01%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 56.71
+Accuracy on validation set: 54.91%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 57.08
+Accuracy on validation set: 56.07%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 58.05
+Accuracy on validation set: 60.75%
+
+
+Accuracy on test set: 61.33
+
+
+

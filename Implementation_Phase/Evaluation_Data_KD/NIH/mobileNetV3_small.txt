@@ -1,0 +1,48 @@
+Training mobileNetV3_small on NIH at 1741660942.475072
+-----------------------------------------------
+
+
+Training mobileNetV3_small on NIH at 1741674736.0210059
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 48.41
+Accuracy on validation set: 52.57%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 51.34
+Accuracy on validation set: 54.67%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 52.96
+Accuracy on validation set: 56.78%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 55.77
+Accuracy on validation set: 60.75%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 55.57
+Accuracy on validation set: 61.45%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 57.65
+Accuracy on validation set: 62.62%
+
+
+Accuracy on test set: 62.07
+
+
+

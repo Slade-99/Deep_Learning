@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Folder where scripts are located
-script_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/For_plots"
+script_dir = "/home/azwad/Works/Deep_Learning/Implementation_Phase/KD_Training_scripts"
 
 # Get all Python scripts in the folder
 scripts = sorted([f for f in os.listdir(script_dir) if f.endswith(".py")])

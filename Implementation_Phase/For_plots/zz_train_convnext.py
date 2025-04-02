@@ -44,7 +44,7 @@ log_file.write(f"-----------------------------------------------\n\n\n")
 in_channels = 1
 num_classes = 3
 learning_rate = 0.00005
-batch_size = 16
+batch_size = 8
 num_epochs = 50
 #########################
 
@@ -197,7 +197,7 @@ def train(model):
     for epoch in range(1, num_epochs + 1):
         epoch_losses = [] # List for losses in current epoch
         
-        for batch_idx, (data, targets) in enumerate(train_loader):
+        for batch_idx, (data, targets) in enumerate(tqdm(train_loader)):
             # Get data to cuda if possible
             data = data.to(device=device)
             targets = targets.to(device=device)
@@ -213,6 +213,8 @@ def train(model):
 
             # gradient descent or adam step
             optimizer.step()
+            if(batch_idx%100==0):
+                time.sleep(10)
         
         # Calculate average epoch loss
         avg_epoch_loss = sum(epoch_losses) / len(epoch_losses)
