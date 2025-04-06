@@ -25,12 +25,12 @@ class CvT(nn.Module):
         """ Forward pass with Grad-CAM support """
         outputs = self.CvT(x)
 
-        # Get the feature maps from the target layer (last convolutional layer)
-        feature_maps = outputs.last_hidden_state  # Extract activations
-        print(feature_maps)
-        feature_maps.requires_grad_()
+
+        feature_maps = outputs.last_hidden_state  
+        #print(feature_maps)
+
         feature_maps.register_hook(self.activations_hook)  # Hook for gradients
-        print(self.gradients)
+
         pooler_output = outputs.cls_token_value  
         pooler_output = pooler_output.squeeze(1)
         logits = self.classifier(pooler_output)  
@@ -49,18 +49,3 @@ class CvT(nn.Module):
 
 
 model = CvT().to(device)
-
-x = torch.rand(1, 1, 224, 224).to(device)  # Input tensor
-logits = model(x)  # Forward pass
-
-# 🔥 **Trigger Gradients Computation**
-target_class = logits.argmax(-1).item()  # Predicted class
-print(target_class)
-logits[:, target_class].backward(retain_graph=True)  # Compute gradients
-
-# 🔍 **Check if gradients are stored**
-print("Gradients: ", model.get_activations_gradient())
-#summary(model, input_size =(1,224,224))
-#total_params = sum(p.numel() for p in model.parameters())
-#trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-#print(trainable_params)

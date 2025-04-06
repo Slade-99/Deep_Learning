@@ -23,13 +23,13 @@ class LeViT(nn.Module):
         self.gradients = grad
 
     def forward(self, x):
-        output = self.LeViT(x)
-        feature_maps = output.last_hidden_state  # Extract activations
+        outputs = self.LeViT(x)
+        feature_maps = outputs.last_hidden_state  # Extract activations
 
         #feature_maps.requires_grad_()
         feature_maps.register_hook(self.activations_hook)  # Hook for gradients
 
-        pooler_output = output.pooler_output  # Get the CLS token output
+        pooler_output = outputs.pooler_output  # Get the CLS token output
          # Remove the second dimension to get shape [batch_size, hidden_size]
           # Print the shape
         logits = self.classifier(pooler_output)  # Pass through the classification head

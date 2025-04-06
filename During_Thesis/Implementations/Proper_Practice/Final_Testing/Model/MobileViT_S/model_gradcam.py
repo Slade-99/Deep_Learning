@@ -7,7 +7,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 class MobileViT(nn.Module):
     def __init__(self, num_labels):
         super(MobileViT, self).__init__()
-        self.use_gradCAM = False
+        self.use_gradCAM = True
         self.gradients = None  # To store gradients
 
         # Load the MobileViT model

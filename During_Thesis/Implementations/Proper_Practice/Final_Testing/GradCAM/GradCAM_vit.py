@@ -1,8 +1,7 @@
 import torch
 import torch.nn as nn
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model_gradcam import model
-from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.CVT.model_gradcam import model
-#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
+from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.Swin.model_new import model
 from torchsummary import summary
@@ -16,12 +15,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 class_names = ['normal', 'pneumonia', 'abnormal' ]
 
 # Preparing the Trained Model
-model_path = '/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Model_Weights/MobileNet_V2.pth.tar'
+model_path = '/home/azwad/Works/Model_Weights/LeViT.pth.tar'
 model = model.to(device)
 learning_rate = 0.0001
-#checkpoint = torch.load(model_path)
+checkpoint = torch.load(model_path)
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-#model.load_state_dict(checkpoint['state_dict'])
+model.load_state_dict(checkpoint['state_dict'])
 model.eval()
 
 img = None
@@ -47,24 +46,29 @@ for idx, (images, labels) in enumerate(train_dataloader):
 
         # Compute gradients with respect to the predicted class
         
-        pred[:, class_index].backward()
+        pred[:, class_index].backward(retain_graph=True)
 
         # Retrieve gradients and activations
         gradients = model.get_activations_gradient()
-        pooled_gradients = torch.mean(gradients, dim=[0, 2, 3])
+
+        pooled_gradients = torch.mean(gradients, dim= 2)
         
         activations = model.get_activations(single_image).detach()
+        
 
         # Weight the activations by the pooled gradients
-        for j in range(activations.shape[1]):  # Dynamically handle channel count
-            activations[:, j, :, :] *= pooled_gradients[j]
-            
+        #for j in range(activations.shape[1]):  # Dynamically handle channel count
+        #    activations[:, j, :, :] *= pooled_gradients[j]
+        weights = pooled_gradients.unsqueeze(-1)  # Shape: [1, 16, 1]
+        weighted_activations = activations * weights
 
         # Compute the heatmap
-        heatmap = torch.mean(activations, dim=1).squeeze()
+        heatmap = torch.mean(weighted_activations, dim=2).squeeze()
         heatmap = heatmap / torch.max(heatmap)  # Normalize
         heatmap = heatmap.cpu().numpy()
-        heatmap = np.maximum(heatmap, 0)  # Apply ReLU
+        heatmap = np.maximum(heatmap, 0.1)  
+        #heatmap = heatmap / np.max(heatmap + 1e-8)
+        heatmap = heatmap.reshape(4, 4)
         heatmap = cv2.resize(heatmap, (single_image.shape[2], single_image.shape[3]))  # Resize to match image
 
         # Convert image tensor to NumPy format for visualization
@@ -86,7 +90,7 @@ for idx, (images, labels) in enumerate(train_dataloader):
         heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 
         # Blend the heatmap with the original image
-        blended_image = cv2.addWeighted(image, 0.6, heatmap, 0.4, 0)
+        blended_image = cv2.addWeighted(image, 0.6, heatmap, 0.3, 0)
 
         # Plot the result in the appropriate subplot
         ax = axes[i]
