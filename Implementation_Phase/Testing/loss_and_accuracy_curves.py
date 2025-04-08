@@ -55,6 +55,7 @@ axes[0].grid(True)
 axes[0].tick_params(axis='both', labelsize=14, width=2)
 for spine in axes[0].spines.values():
     spine.set_linewidth(2)
+    
 # Plot Loss
 for model, (accuracy, loss) in model_metrics.items():
     axes[1].plot(epochs, loss, label=model)

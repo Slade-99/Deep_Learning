@@ -1,11 +1,12 @@
 ####### Evalutions #######
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.EdgeViT.model import model
 #from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
 #from Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model_gradcam import model
 from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
-#from Implementations.Proper_Practice.Final_Testing.Model.Swin.model import model
-#from Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
-#from Implementations.Proper_Practice.Final_Testing.Model.CVT.model import model
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.Swin.model_new import model
+
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.CVT.model_gradcam import model
 from During_Thesis.Implementations.Preprocessings.Private_Dataset_Preprocessings.Testing_prepare_private_dataset import test_dataloader ,eval_transforms
 #from Implementations.Proper_Practice.Final_Testing.Utils.utils import save_checkpoint,load_checkpoint
 import torch
@@ -23,9 +24,9 @@ from torch import optim
 from torchvision.transforms.functional import to_pil_image
 import matplotlib.pyplot as plt
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/Results_Data/MobileNet_V2_S/testing_metric.txt"
-description = "MobileViT_S"
-model_path = '/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Model_Weights/MobileNet_V2.pth.tar'
+log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/Results_Data/LeViT/testing_metric.txt"
+description = "LeViT"
+model_path = '/home/azwad/Works/Model_Weights/MobileNet_V2.pth.tar'
 class_names = ['normal', 'abnormal' , 'pneumonia' ]
 
 
@@ -38,7 +39,7 @@ checkpoint = torch.load(model_path)
 global_model = model.to(device=device)
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 global_model.load_state_dict(checkpoint['state_dict'])
-
+#print(global_model.levit_model.classifier.linear.bias)
 global_model = model.to(device=device)
 
 global_model.eval()
@@ -52,6 +53,7 @@ with torch.no_grad():
         images, labels = images.to(device), labels.to(device)
         outputs = global_model(images)
         probs = torch.softmax(outputs, dim=1)  # Get probabilities
+        #print(probs)
         _, preds = torch.max(outputs, 1)
 
         all_labels.extend(labels.cpu().numpy())

@@ -6,15 +6,16 @@ import torch.nn as nn
 from datetime import datetime
 from tqdm import tqdm
 import numpy as np
+from sklearn.utils.class_weight import compute_class_weight
 import importlib
 import During_Thesis.Implementations.Preprocessings.Private_Dataset_Preprocessings.K_Fold_prepare_private_dataset
 from During_Thesis.Implementations.Preprocessings.Private_Dataset_Preprocessings.K_Fold_prepare_private_dataset_v2 import AugmentedDataset
 #from Implementations.Proper_Practice.Final_Testing.Model.Custom_Architecture.sparse_att import model
 #from Implementations.Proper_Practice.Final_Testing.Model.Swin.model import model
-#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.EdgeViT.model import model
+from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.LeViT.model_new import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.CVT.model_gradcam import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model_gradcam import model
-from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.Swin.model_new import model
 import torch.nn.functional as F  
 from torch import optim
@@ -23,7 +24,7 @@ current_datetime = datetime.now()
 
 
 def save_checkpoint(state):
-    filename="/home/azwad/Works/Model_Weights/MobileNet_V2"
+    filename="/home/azwad/Works/Model_Weights/LeViT"
     filename = filename+".pth.tar"
     print("=>Saving checkpoint")
     torch.save(state,filename)
@@ -44,7 +45,7 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 
 ### Training Loop  ##
-log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/GradCAM/runs_mobilenet_new.txt"
+log_file_path = "/home/azwad/Works/Deep_Learning/During_Thesis/Implementations/Proper_Practice/Final_Testing/GradCAM/runs_levit_new.txt"
 description = "Implementation of LeViT on Benchmark dataset"
 name = "LeViT on Benchmark"
 
@@ -85,7 +86,13 @@ def kfold_cross_validation(k,  batch_size, model):
 
         # Initialize your model here (e.g., a simple CNN or pre-trained model)
         model = model.to(device)
-        criterion = nn.CrossEntropyLoss()
+        
+        
+        your_train_labels = dataset.targets
+        #print(dataset.class_to_idx)
+        class_weights = compute_class_weight(class_weight='balanced',classes=np.unique(your_train_labels),y=your_train_labels)
+        weights = torch.tensor(class_weights, dtype=torch.float).to(device)
+        criterion = nn.CrossEntropyLoss(weight = weights)
         optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
         
@@ -94,7 +101,7 @@ def kfold_cross_validation(k,  batch_size, model):
             model.train()
             count = 0
             augmented_train_subset = AugmentedDataset(train_subset, 'aug')
-            train_loader = DataLoader(augmented_train_subset, batch_size=16, shuffle=True)
+            train_loader = DataLoader(augmented_train_subset, batch_size=16, shuffle=False)
             
             correct = 0
             total = 0

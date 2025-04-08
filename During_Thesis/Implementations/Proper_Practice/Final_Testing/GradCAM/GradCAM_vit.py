@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileViT_S.model_gradcam import model
-from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.LeViT.model import model
+#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.LeViT.model_new import model
 #from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.MobileNet_V2.model_new import model
-#from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.Swin.model_new import model
+from During_Thesis.Implementations.Proper_Practice.Final_Testing.Model.Swin.model_new import model
 from torchsummary import summary
 from During_Thesis.Implementations.Preprocessings.Private_Dataset_Preprocessings.Testing_prepare_private_dataset import test_dataloader ,eval_transforms
 import numpy as np
@@ -18,9 +18,9 @@ class_names = ['normal', 'pneumonia', 'abnormal' ]
 model_path = '/home/azwad/Works/Model_Weights/LeViT.pth.tar'
 model = model.to(device)
 learning_rate = 0.0001
-checkpoint = torch.load(model_path)
+#checkpoint = torch.load(model_path)
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-model.load_state_dict(checkpoint['state_dict'])
+#model.load_state_dict(checkpoint['state_dict'])
 model.eval()
 
 img = None
@@ -50,9 +50,9 @@ for idx, (images, labels) in enumerate(train_dataloader):
 
         # Retrieve gradients and activations
         gradients = model.get_activations_gradient()
-
-        pooled_gradients = torch.mean(gradients, dim= 2)
-        
+        print(gradients)
+        pooled_gradients = torch.mean(gradients, dim=2)
+        #print(pooled_gradients)
         activations = model.get_activations(single_image).detach()
         
 
@@ -100,4 +100,4 @@ for idx, (images, labels) in enumerate(train_dataloader):
 
 # Show the plot with multiple images in rows and columns
 plt.tight_layout()
-plt.show()
+#plt.show()

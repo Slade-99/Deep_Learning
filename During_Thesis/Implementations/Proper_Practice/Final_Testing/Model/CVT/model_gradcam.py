@@ -16,10 +16,20 @@ class CvT(nn.Module):
 
         # Fully connected classifier
         self.classifier = nn.Linear(384, 3)
+        self.target_layer = self.CvT.encoder.stages[-1].layers[-1].attention.attention.convolution_projection_value.convolution_projection.convolution
 
-    def activations_hook(self, grad):
-        """ Store gradients during backpropagation """
-        self.gradients = grad
+
+        self.target_layer.register_forward_hook(self.forward_hook)
+        self.target_layer.register_full_backward_hook(self.backward_hook)
+
+
+    def forward_hook(self, module, input, output):
+
+        self.feature_maps = output
+
+    def backward_hook(self, module, grad_in, grad_out):
+
+        self.gradients = grad_out[0]
 
     def forward(self, x):
         """ Forward pass with Grad-CAM support """
@@ -29,7 +39,7 @@ class CvT(nn.Module):
         feature_maps = outputs.last_hidden_state  
         #print(feature_maps)
 
-        feature_maps.register_hook(self.activations_hook)  # Hook for gradients
+
 
         pooler_output = outputs.cls_token_value  
         pooler_output = pooler_output.squeeze(1)
@@ -37,14 +47,13 @@ class CvT(nn.Module):
         return logits
 
     def get_activations_gradient(self):
-        """ Retrieve stored gradients """
+
         return self.gradients
 
     def get_activations(self, x):
-        """ Forward pass to get activations from target layer """
-        with torch.no_grad():
-            outputs = self.CvT(x)
-        return outputs.last_hidden_state  # Feature maps
+
+        _ = self.forward(x)  
+        return self.feature_maps  
 
 
 

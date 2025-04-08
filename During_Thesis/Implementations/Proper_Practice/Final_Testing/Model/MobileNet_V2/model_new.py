@@ -11,7 +11,7 @@ class MobileNetV2(nn.Module):
         self.feature_maps = None  
 
 
-        self.mobilenetv2 = models.mobilenet_v2(pretrained=True).to(device)
+        self.mobilenetv2 = models.mobilenet_v2(pretrained=False).to(device)
 
 
         self.mobilenetv2.features[0][0] = nn.Conv2d(1, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
