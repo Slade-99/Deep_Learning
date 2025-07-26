@@ -1,0 +1,68 @@
+Training shufflenet_v2_x0_5 on Retinal_OCT at 1751157607.9839706
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 59.78
+Accuracy on validation set: 65.93%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 71.69
+Accuracy on validation set: 76.25%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 77.50
+Accuracy on validation set: 80.89%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 80.53
+Accuracy on validation set: 83.86%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 82.51
+Accuracy on validation set: 85.68%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 84.76
+Accuracy on validation set: 87.39%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 85.97
+Accuracy on validation set: 87.96%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 87.07
+Accuracy on validation set: 88.68%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 88.01
+Accuracy on validation set: 89.61%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 88.70
+Accuracy on validation set: 90.46%
+
+
+Accuracy on test set: 90.21
+
+
+

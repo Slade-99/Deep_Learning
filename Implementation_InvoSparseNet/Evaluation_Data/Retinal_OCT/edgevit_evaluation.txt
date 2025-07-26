@@ -1,0 +1,48 @@
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.9112
+  - F1 Score: 0.9114
+  - Precision: 0.9132
+  - Recall: 0.9112
+  - Latency: 0.0456 s
+
+
+
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.9112
+  - F1 Score: 0.9114
+  - Precision: 0.9132
+  - Recall: 0.9112
+  - Latency: 0.0360 s
+
+
+
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.9162
+  - F1 Score: 0.9164
+  - Precision: 0.9182
+  - Recall: 0.9162
+  - Latency: 0.0352 s
+
+
+
+
+Final Evaluation :
+
+{description} :
+  - Accuracy: 0.9162
+  - F1 Score: 0.9164
+  - Precision: 0.9182
+  - Recall: 0.9162
+  - Latency: 0.0366 s
+
+
+

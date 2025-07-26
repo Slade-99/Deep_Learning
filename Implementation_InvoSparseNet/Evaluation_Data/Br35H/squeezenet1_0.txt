@@ -1,0 +1,30 @@
+Training squeezenet1_0 on Br35H at 1751116197.5821977
+-----------------------------------------------
+
+
+Training squeezenet1_0 on Br35H at 1751118112.7733989
+-----------------------------------------------
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 71.54
+Accuracy on validation set: 67.86%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 76.27
+Accuracy on validation set: 67.14%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 73.62
+Accuracy on validation set: 67.14%
+
+
+Accuracy on test set: 77.68
+
+
+

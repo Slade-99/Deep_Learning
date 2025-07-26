@@ -1,0 +1,68 @@
+Training squeezenet1_0 on Retinal_OCT at 1751162173.1505914
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 72.22
+Accuracy on validation set: 79.46%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 83.04
+Accuracy on validation set: 86.96%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.68
+Accuracy on validation set: 89.75%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 89.03
+Accuracy on validation set: 90.75%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 90.88
+Accuracy on validation set: 91.54%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 91.51
+Accuracy on validation set: 92.32%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 92.76
+Accuracy on validation set: 92.64%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 93.51
+Accuracy on validation set: 93.21%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 93.04
+Accuracy on validation set: 93.32%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 94.25
+Accuracy on validation set: 93.86%
+
+
+Accuracy on test set: 94.21
+
+
+

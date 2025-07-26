@@ -1,0 +1,96 @@
+Training mobilenet_v3_small on Br35H at 1751115967.594187
+-----------------------------------------------
+
+
+Training mobilenet_v3_small on Br35H at 1751115977.496747
+-----------------------------------------------
+
+
+Training mobilenet_v3_small on Br35H at 1751117169.8864427
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 70.74
+Accuracy on validation set: 60.00%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 75.07
+Accuracy on validation set: 65.71%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 75.00
+Accuracy on validation set: 64.29%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 77.40
+Accuracy on validation set: 62.14%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 77.26
+Accuracy on validation set: 67.86%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 77.47
+Accuracy on validation set: 67.86%
+
+
+Accuracy on test set: 82.14
+
+
+
+Training mobilenet_v3_small on Br35H at 1751117444.2215946
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 80.49
+Accuracy on validation set: 73.57%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 83.11
+Accuracy on validation set: 79.29%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.06
+Accuracy on validation set: 80.71%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 88.54
+Accuracy on validation set: 80.71%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 91.19
+Accuracy on validation set: 88.57%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 92.61
+Accuracy on validation set: 92.86%
+
+
+Accuracy on test set: 95.54
+
+
+

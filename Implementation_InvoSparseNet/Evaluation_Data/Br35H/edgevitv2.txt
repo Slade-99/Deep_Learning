@@ -1,0 +1,44 @@
+Training edgevitv2 on Br35H at 1751116270.4417984
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 75.62
+Accuracy on validation set: 76.43%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 85.37
+Accuracy on validation set: 82.86%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 88.17
+Accuracy on validation set: 92.86%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 90.90
+Accuracy on validation set: 91.43%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 93.96
+Accuracy on validation set: 93.57%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 94.83
+Accuracy on validation set: 95.71%
+
+
+Accuracy on test set: 98.21
+
+
+

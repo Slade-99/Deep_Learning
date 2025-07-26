@@ -1,0 +1,132 @@
+Training mobilevitv2 on Skin_cancer_ISIC at 1751174254.854932
+-----------------------------------------------
+
+
+Training mobilevitv2 on Skin_cancer_ISIC at 1751226384.0113697
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 22.12
+Accuracy on validation set: 17.80%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 22.74
+Accuracy on validation set: 22.03%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 29.04
+Accuracy on validation set: 28.81%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 34.45
+Accuracy on validation set: 26.27%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 34.00
+Accuracy on validation set: 33.90%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 38.34
+Accuracy on validation set: 30.51%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 38.78
+Accuracy on validation set: 33.90%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 41.42
+Accuracy on validation set: 32.20%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 42.63
+Accuracy on validation set: 34.75%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 45.53
+Accuracy on validation set: 39.83%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 46.69
+Accuracy on validation set: 35.59%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 48.79
+Accuracy on validation set: 36.44%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 49.46
+Accuracy on validation set: 41.53%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 55.32
+Accuracy on validation set: 44.07%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 55.72
+Accuracy on validation set: 33.90%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 59.47
+Accuracy on validation set: 44.92%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 59.70
+Accuracy on validation set: 43.22%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 62.38
+Accuracy on validation set: 43.22%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 63.90
+Accuracy on validation set: 44.07%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 67.74
+Accuracy on validation set: 46.61%
+
+
+Accuracy on test set: 46.61
+
+
+

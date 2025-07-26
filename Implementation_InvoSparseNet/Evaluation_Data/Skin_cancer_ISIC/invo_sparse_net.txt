@@ -1,0 +1,446 @@
+Training invo_sparse_net on Skin_cancer_ISIC at 1751173923.9102976
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 24.13
+Accuracy on validation set: 21.19%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 26.90
+Accuracy on validation set: 25.42%
+Training invo_sparse_net on Skin_cancer_ISIC at 1751210705.1004074
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 47.01
+Accuracy on validation set: 33.05%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 53.44
+Accuracy on validation set: 36.44%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751212307.9580197
+-----------------------------------------------
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751212330.5822005
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 42.81
+Accuracy on validation set: 32.20%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 49.33
+Accuracy on validation set: 38.98%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 53.62
+Accuracy on validation set: 44.07%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 63.32
+Accuracy on validation set: 46.61%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 65.73
+Accuracy on validation set: 51.69%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 71.00
+Accuracy on validation set: 50.00%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 74.66
+Accuracy on validation set: 51.69%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 75.51
+Accuracy on validation set: 54.24%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 82.89
+Accuracy on validation set: 56.78%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751213545.4494822
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 26.81
+Accuracy on validation set: 9.32%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751213745.1718075
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 27.48
+Accuracy on validation set: 17.80%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 32.39
+Accuracy on validation set: 20.34%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 35.21
+Accuracy on validation set: 16.95%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 38.56
+Accuracy on validation set: 21.19%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 37.31
+Accuracy on validation set: 24.58%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 40.44
+Accuracy on validation set: 25.42%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 40.57
+Accuracy on validation set: 25.42%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751214895.317431
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 29.62
+Accuracy on validation set: 12.71%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 33.15
+Accuracy on validation set: 19.49%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 38.25
+Accuracy on validation set: 21.19%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 36.91
+Accuracy on validation set: 23.73%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 40.30
+Accuracy on validation set: 24.58%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 38.47
+Accuracy on validation set: 22.03%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 41.91
+Accuracy on validation set: 27.12%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 43.25
+Accuracy on validation set: 23.73%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 40.26
+Accuracy on validation set: 23.73%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 44.06
+Accuracy on validation set: 29.66%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 45.26
+Accuracy on validation set: 30.51%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 44.91
+Accuracy on validation set: 29.66%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751216641.0063467
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 36.95
+Accuracy on validation set: 33.05%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 43.43
+Accuracy on validation set: 38.14%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 49.64
+Accuracy on validation set: 42.37%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 56.93
+Accuracy on validation set: 44.92%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 59.20
+Accuracy on validation set: 45.76%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 63.81
+Accuracy on validation set: 50.00%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 67.34
+Accuracy on validation set: 53.39%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 68.41
+Accuracy on validation set: 56.78%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 68.95
+Accuracy on validation set: 53.39%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 70.15
+Accuracy on validation set: 53.39%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 73.10
+Accuracy on validation set: 52.54%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 73.32
+Accuracy on validation set: 54.24%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 78.42
+Accuracy on validation set: 55.93%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 76.99
+Accuracy on validation set: 54.24%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 76.27
+Accuracy on validation set: 54.24%
+
+
+Training invo_sparse_net on Skin_cancer_ISIC at 1751221775.9830225
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 34.99
+Accuracy on validation set: 22.88%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 45.13
+Accuracy on validation set: 38.14%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 47.36
+Accuracy on validation set: 43.22%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 54.56
+Accuracy on validation set: 44.07%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 57.86
+Accuracy on validation set: 38.98%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 60.86
+Accuracy on validation set: 52.54%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 65.55
+Accuracy on validation set: 47.46%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 68.10
+Accuracy on validation set: 53.39%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 69.97
+Accuracy on validation set: 54.24%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 73.59
+Accuracy on validation set: 49.15%
+
+
+Results on epoch 55
+------------------------------
+Accuracy on training set: 76.18
+Accuracy on validation set: 45.76%
+
+
+Results on epoch 60
+------------------------------
+Accuracy on training set: 78.64
+Accuracy on validation set: 52.54%
+
+
+Results on epoch 65
+------------------------------
+Accuracy on training set: 77.21
+Accuracy on validation set: 58.47%
+
+
+Results on epoch 70
+------------------------------
+Accuracy on training set: 82.39
+Accuracy on validation set: 50.85%
+
+
+Results on epoch 75
+------------------------------
+Accuracy on training set: 81.23
+Accuracy on validation set: 54.24%
+
+
+Results on epoch 80
+------------------------------
+Accuracy on training set: 82.04
+Accuracy on validation set: 53.39%
+
+
+Results on epoch 85
+------------------------------
+Accuracy on training set: 85.12
+Accuracy on validation set: 55.93%
+
+
+Results on epoch 90
+------------------------------
+Accuracy on training set: 86.24
+Accuracy on validation set: 51.69%
+
+
+Results on epoch 95
+------------------------------
+Accuracy on training set: 87.49
+Accuracy on validation set: 56.78%
+
+
+Results on epoch 100
+------------------------------
+Accuracy on training set: 87.27
+Accuracy on validation set: 54.24%
+
+
+Accuracy on test set: 54.24
+
+
+

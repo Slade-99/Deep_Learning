@@ -1,0 +1,68 @@
+Training mobilenet_v3_small on Retinal_OCT at 1751148302.2583132
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 73.66
+Accuracy on validation set: 77.68%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 81.74
+Accuracy on validation set: 86.18%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 86.08
+Accuracy on validation set: 88.29%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.88
+Accuracy on validation set: 89.43%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 89.29
+Accuracy on validation set: 89.96%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 90.62
+Accuracy on validation set: 91.07%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 91.42
+Accuracy on validation set: 91.93%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 92.15
+Accuracy on validation set: 92.46%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 92.49
+Accuracy on validation set: 92.79%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 93.55
+Accuracy on validation set: 92.89%
+
+
+Accuracy on test set: 93.11
+
+
+

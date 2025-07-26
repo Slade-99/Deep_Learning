@@ -1,0 +1,68 @@
+Training edgevitv2 on Retinal_OCT at 1751135788.8646576
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 59.51
+Accuracy on validation set: 60.14%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 66.91
+Accuracy on validation set: 67.82%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 70.66
+Accuracy on validation set: 72.89%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 75.12
+Accuracy on validation set: 75.29%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 77.39
+Accuracy on validation set: 77.54%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 78.54
+Accuracy on validation set: 78.29%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 80.86
+Accuracy on validation set: 80.61%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 82.12
+Accuracy on validation set: 81.79%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 83.29
+Accuracy on validation set: 83.04%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 83.61
+Accuracy on validation set: 83.32%
+
+
+Accuracy on test set: 82.54
+
+
+

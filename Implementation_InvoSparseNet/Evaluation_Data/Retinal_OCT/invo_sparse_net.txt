@@ -1,0 +1,68 @@
+Training invo_sparse_net on Retinal_OCT at 1751140969.8933876
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 49.87
+Accuracy on validation set: 53.64%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 72.11
+Accuracy on validation set: 74.43%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 82.43
+Accuracy on validation set: 85.68%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 87.68
+Accuracy on validation set: 89.57%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 91.48
+Accuracy on validation set: 93.50%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 93.15
+Accuracy on validation set: 94.07%
+
+
+Results on epoch 35
+------------------------------
+Accuracy on training set: 94.16
+Accuracy on validation set: 94.46%
+
+
+Results on epoch 40
+------------------------------
+Accuracy on training set: 94.50
+Accuracy on validation set: 94.75%
+
+
+Results on epoch 45
+------------------------------
+Accuracy on training set: 94.89
+Accuracy on validation set: 94.79%
+
+
+Results on epoch 50
+------------------------------
+Accuracy on training set: 94.96
+Accuracy on validation set: 94.82%
+
+
+Accuracy on test set: 94.96
+
+
+

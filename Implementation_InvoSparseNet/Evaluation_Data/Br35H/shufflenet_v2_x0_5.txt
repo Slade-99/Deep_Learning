@@ -1,0 +1,48 @@
+Training shufflenet_v2_x0_5 on Br35H at 1751115990.050588
+-----------------------------------------------
+
+
+Training shufflenet_v2_x0_5 on Br35H at 1751117835.4907382
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 56.00
+Accuracy on validation set: 42.14%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 62.19
+Accuracy on validation set: 50.71%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 66.78
+Accuracy on validation set: 60.71%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 68.20
+Accuracy on validation set: 68.57%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 68.74
+Accuracy on validation set: 70.00%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 68.74
+Accuracy on validation set: 70.71%
+
+
+Accuracy on test set: 79.46
+
+
+

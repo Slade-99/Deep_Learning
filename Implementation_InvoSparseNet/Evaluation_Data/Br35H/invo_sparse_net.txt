@@ -1,0 +1,188 @@
+Training invo_sparse_net on Br35H at 1751113097.9798067
+-----------------------------------------------
+
+
+Training invo_sparse_net on Br35H at 1751113135.5107596
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 79.04
+Accuracy on validation set: 58.57%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 84.17
+Accuracy on validation set: 75.71%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 88.36
+Accuracy on validation set: 80.00%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 91.16
+Accuracy on validation set: 87.86%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 91.96
+Accuracy on validation set: 87.86%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 93.49
+Accuracy on validation set: 88.57%
+
+
+Accuracy on test set: 96.43
+
+
+
+Training invo_sparse_net on Br35H at 1751115957.9351552
+-----------------------------------------------
+
+
+Training invo_sparse_net on Br35H at 1751116544.9076416
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 80.24
+Accuracy on validation set: 65.71%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 85.66
+Accuracy on validation set: 75.71%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 88.86
+Accuracy on validation set: 82.86%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 90.83
+Accuracy on validation set: 86.43%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 93.16
+Accuracy on validation set: 91.43%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 93.49
+Accuracy on validation set: 90.71%
+
+
+Accuracy on test set: 93.75
+
+
+
+Training invo_sparse_net on Br35H at 1751123034.7434278
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 86.39
+Accuracy on validation set: 75.00%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 94.00
+Accuracy on validation set: 97.14%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 95.71
+Accuracy on validation set: 94.29%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 97.89
+Accuracy on validation set: 96.43%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 98.11
+Accuracy on validation set: 94.29%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 98.51
+Accuracy on validation set: 99.29%
+
+
+Accuracy on test set: 99.11
+
+
+
+Training invo_sparse_net on Br35H at 1751124043.6799624
+-----------------------------------------------
+
+
+Results on epoch 5
+------------------------------
+Accuracy on training set: 85.37
+Accuracy on validation set: 73.57%
+
+
+Results on epoch 10
+------------------------------
+Accuracy on training set: 91.08
+Accuracy on validation set: 86.43%
+
+
+Results on epoch 15
+------------------------------
+Accuracy on training set: 93.56
+Accuracy on validation set: 89.29%
+
+
+Results on epoch 20
+------------------------------
+Accuracy on training set: 94.83
+Accuracy on validation set: 92.14%
+
+
+Results on epoch 25
+------------------------------
+Accuracy on training set: 96.62
+Accuracy on validation set: 92.86%
+
+
+Results on epoch 30
+------------------------------
+Accuracy on training set: 96.18
+Accuracy on validation set: 93.57%
+
+
+Accuracy on test set: 99.11
+
+
+
+Training invo_sparse_net on Br35H at 1751124827.320431
+-----------------------------------------------
+
+
