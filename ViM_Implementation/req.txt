@@ -1,0 +1,32 @@
+1) Check your GPU's CUDA compute capability:
+nvidia-smi --query-gpu=compute_cap --format=csv,noheader
+
+2) Set the compute cabability value by running the command in the conda environment activated terminal 
+export TORCH_CUDA_ARCH_LIST="8.6"
+
+3) Clone and install the following repo
+git clone https://github.com/Dao-AILab/causal-conv1d.git
+cd causal-conv1d
+pip install . --no-build-isolation
+cd ../
+
+git clone https://github.com/state-spaces/mamba.git
+cd mamba
+pip install . --no-build-isolation
+cd ../
+
+
+pip install timm einops
+pip install rope
+pip install timm
+
+
+
+
+
+
+
+
+
+
+
